@@ -1,0 +1,27 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    Layout = null;
+
+    ////## Log the exception and notify system operators
+    //ExceptionUtility.LogException(Model);
+    //ExceptionUtility.NotifySystemOps(Model);
+}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>OOPS!</title>
+</head>
+<body style="background-color:red">
+    <hgroup>
+        <h1>OOPS!</h1>
+        <h2>系統發生嚴重錯誤，請通知系統管理員！</h2>
+    </hgroup>
+    <h2>@Model.ControllerName/@Model.ActionName</h2>
+    <p>
+        @Model.Exception.Message
+    </p>
+    <h3>StackTrace</h3>
+    <pre>@Model.Exception.StackTrace</pre>
+</body>
+</html>

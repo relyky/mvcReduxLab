@@ -1,0 +1,59 @@
+﻿body {
+    /* 變更預設字型 */
+    font-family: "微軟正黑體","微软雅黑","Microsoft YaHei","標楷體",Tahoma,Helvetica,Arial,sans-serif;
+    /* 背景顏色 */
+    /*background-color: #78909C;*/
+    /* 字體放大至２倍 */
+    /*font-size: 2.0em;*/
+}
+
+/* 不要移除不然 .overlay 會失效 --- 應該不需要了
+#body-content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    //padding: 20px;
+    //padding-left: 15px;
+    //padding-right: 15px;
+}
+*/
+
+/*.card-header.fa {
+    transition: .3s transform ease-in-out;
+}
+
+.card-header.collapsed.fa {
+    transform: rotate(90deg);
+}*/
+
+/* 客制化： btn-group:hover 上色混淆處理 : BEGIN */
+.btn-group > .btn.btn-outline-primary.active:hover {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-group > .btn.btn-outline-primary:hover {
+    color: var(--primary);
+    background-color: var(--white);
+    border-color: var(--primary);
+}
+
+.btn-group > .btn-outline-primary.disabled,
+.btn-group > .btn-outline-primary:disabled {
+    color: darkgray;
+    background-color: lightgray;
+    border-color: darkgray;
+}
+
+.btn-group > .btn-outline-primary.active.disabled,
+.btn-group > .btn-outline-primary.active:disabled {
+    color: darkgray;
+    background-color: var(--primary);
+    border-color: darkgray;
+}
+/* 客制化： btn-group:hover 上色混淆處理 : END */

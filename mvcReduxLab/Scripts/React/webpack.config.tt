@@ -1,0 +1,83 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".js" #>
+<#
+var sysFuncIds = new [] {
+	new { name = "ReactLab", funcIds = new string[] {
+		"Hello","Demo"
+	}},
+	//new { name = "MA00", funcIds = new string[] {
+	//	"MA000201",
+	//	"MA000202",
+	//	"MA000203"
+	//}},
+};
+#>
+var path = require('path');
+module.exports = [
+{
+    context: __dirname,
+	entry: {
+<#
+foreach(var subSys in sysFuncIds)
+foreach(var functionId in subSys.funcIds) 
+{ #>
+		<#= subSys.name.ToLower() + functionId.ToLower() #>:'./<#= subSys.name #>/<#= functionId #>/app.js',
+<# } #>
+	},
+    output: {
+        path: path.resolve(__dirname, '../bundle/'),
+        filename: (chunkData) => (chunkData.chunk.name.split('~')[0]).concat('.js'),
+		chunkFilename: '[name].[id].js',
+    }, 
+<# // 命名問題未找到最佳解，暫不使用。
+//    optimization: {
+//      splitChunks: { // 切割檔案，最大244KB。
+//        chunks: 'all',
+//        maxSize: 244000,
+//        name: (module, chunks, cacheGroupKey) => chunks[0].name
+//      }
+//    }, 
+#>
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets:['babel-preset-env','babel-preset-react'],
+						plugins:['transform-object-rest-spread']
+                    }
+                }
+            },
+            {
+				test: /\.css$/,
+				use: [
+					{ 
+						loader: 'style-loader' 
+					}, 
+					{
+						loader: 'css-loader',
+						options: {
+							modules: false, // CSS Modules 模式 --- 暫不打開，因影響現有套入css的方法。
+							localIdentName: '[path][name]__[local]--[hash:base64:5]'
+						}
+					}
+				]
+            }
+        ]
+    },
+    resolve: {
+        alias: {
+            Common: path.resolve(__dirname, 'Common/'),
+            CommonFF: path.resolve(__dirname, 'CommonFF/'),
+			CommonMA: path.resolve(__dirname, 'CommonMA/')
+        }
+    }
+}, 
+]

@@ -1,0 +1,20 @@
+﻿<script type="text/javascript">
+    var globalappinfo = {
+        functionId: '@TempData["FunctionId"]',
+        appTitle: '@TempData["Title"]',
+        antiForgeryToken: '@TempData["AntiForgeryToken"]',
+        entryFormNo: '@TempData["EntryFormNo"]',
+        entryMode: '@TempData["EntryMode"]',
+        loginUserInfo: {
+            uuid: '@Session["UserId"]',
+            userCname: '@Session["UserCname"]',
+            cpId: '@Session["CpID"]',
+            cpCname: '@Session["CpCname"]',
+            deptId: '@Session["DeptID"]',
+            deptCname: '@Session["DeptCname"]',
+            identityList: null,
+            immCpInfo: null
+        }
+    };
+</script>
+<script src="~/Scripts/bundle/@(TempData["FunctionId"].ToString().ToLower()).js"></script>

@@ -1,0 +1,22 @@
+﻿@functions {
+    public static string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return string.Concat(cookieToken, ":", formToken);
+    }
+
+    /// <summary>
+    /// C# object → json → JavaScript object
+    /// </summary>
+    /// <example>identityList: @Html.Raw(ViewFunctions.ObjectAsJson(TempData["ImmCpIdentityList"]))</example>
+    /// <see cref="https://stackoverflow.com/questions/20667730/json-from-newtonsoft-to-javascript"/>
+    public static string ObjectAsJson(object value)
+    {
+        if (value == null)
+            return "undefined";
+
+        string json = Newtonsoft.Json.JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.None);
+        return json;
+    }
+}

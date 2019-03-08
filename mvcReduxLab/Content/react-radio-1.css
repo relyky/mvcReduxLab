@@ -1,0 +1,86 @@
+/***********************************************************************************/
+/* Custom Radio Buttons                                                            */
+/* ref¡÷https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio */
+/***********************************************************************************/
+
+/* The container */
+.radio---control-radio---2rwkY {
+    /*display: block;*/
+    position: relative;
+    /*padding-left: 35px;*/
+    padding-left: 26px;
+    /*margin-bottom: 12px;*/
+    margin-top: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+    /*font-size: 22px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio---control-radio---2rwkY .radio---input-radio---2yM_b {
+    /*position: absolute;*/
+    opacity: 0;
+    cursor: pointer;
+    margin-left:-17px;
+}
+
+/* Create a custom radio button */
+.radio---control-indicator---dcwXW {
+    position: absolute;
+    top: 3px;
+    /*top: 0;*/
+    left: 0;
+    /*left: 2px;*/
+    /*height: 25px;*/
+    /*width: 25px;*/
+    height: 18px;
+    width: 18px;
+    /*background-color: #eee;*/
+    background-color: white;
+    border-radius: 50%;
+    border: solid 1px #bbb;
+}
+
+/* On mouse-over, add a grey background color */
+.radio---control-radio---2rwkY:hover .radio---input-radio---2yM_b ~ .radio---control-indicator---dcwXW {
+    background-color: #eee;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio---control-radio---2rwkY .radio---input-radio---2yM_b:checked ~ .radio---control-indicator---dcwXW {
+    /*background-color: #2196F3;*/
+    background-color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio---control-indicator---dcwXW:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio---control-radio---2rwkY .radio---input-radio---2yM_b:checked ~ .radio---control-indicator---dcwXW:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio---control-radio---2rwkY .radio---control-indicator---dcwXW:after {
+    /*top: 9px;*/
+    top: 4px;
+    /*left: 9px;*/
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    /*background: white;*/
+    background: #2196F3;
+}
+
+.radio---control-radio---2rwkY .radio---input-radio---2yM_b:disabled ~ .radio---control-indicator---dcwXW {
+    background-color: #ccc;
+}

@@ -1,0 +1,44 @@
+﻿@{
+    TempData["Title"] = "Bootstrap 4 Buttons & Button Groups";
+}
+
+<h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
+
+<div class="container">
+    <h2>Button Styles</h2>
+    <p>Bootstrap 4 provides different styles of buttons:</p>
+
+    <button type="button" class="btn" onclick="swal.fire('I am a Basic button.')">Basic</button>
+    <button type="button" class="btn btn-primary" onclick="swal.fire('I am a Primary button.')">Primary</button>
+    <button type="button" class="btn btn-secondary" onclick="swal.fire('I am a Secondary button.')">Secondary</button>
+    <button type="button" class="btn btn-success" onclick="swal.fire('I am a Success button.')">Success</button>
+    <button type="button" class="btn btn-info" onclick="swal.fire('BaI am a Info button.sic')">Info</button>
+    <button type="button" class="btn btn-warning" onclick="swal.fire('I am a Warning button.')">Warning</button>
+    <button type="button" class="btn btn-danger" onclick="swal.fire('I am a Danger button.')">Danger</button>
+    <button type="button" class="btn btn-dark" onclick="swal.fire('I am a Dark button.')">Dark</button>
+    <button type="button" class="btn btn-light" onclick="swal.fire('I am a Light button.')">Light</button>
+    <button type="button" class="btn btn-link" onclick="swal.fire('I am a Link button.')">Link</button>
+
+    <hr />
+</div>
+
+<div class="container">
+    <h2>Nesting Button Groups</h2>
+    <p>Nest button groups to create dropdown menus:</p>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Sony
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+</div>
