@@ -1,0 +1,5 @@
+/packages
+/.vs
+/mvcReduxLab/bin
+/mvcReduxLab/obj
+/mvcReduxLab/Scripts/React/node_modules
