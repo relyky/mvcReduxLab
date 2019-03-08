@@ -18,7 +18,8 @@ class MyInput extends Component {
 
     render() {
         return (
-            <div className="container" style={{backgroundColor:'yellowgreen'}}>
+            <div className="container" style={{ backgroundColor: 'yellowgreen' }}>
+                <p>說明：展示最簡單的元件運轉機制。</p>
                 <input type="text" name="textValue" value={this.state.textValue} onChange={this.handleInputChange} />
                 <p>
                     <label>textValue:</label>&nbsp;{this.state.textValue}
