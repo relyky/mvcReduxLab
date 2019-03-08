@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcReduxLab", "mvcReduxLab\mvcReduxLab.csproj", "{DE66AF28-921C-4014-BDD8-03F28F09ACE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release.Dev|Any CPU = Release.Dev|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE66AF28-921C-4014-BDD8-03F28F09ACE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE66AF28-921C-4014-BDD8-03F28F09ACE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE66AF28-921C-4014-BDD8-03F28F09ACE1}.Release.Dev|Any CPU.ActiveCfg = Release.Dev|Any CPU
+		{DE66AF28-921C-4014-BDD8-03F28F09ACE1}.Release.Dev|Any CPU.Build.0 = Release.Dev|Any CPU
+		{DE66AF28-921C-4014-BDD8-03F28F09ACE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE66AF28-921C-4014-BDD8-03F28F09ACE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {A5D63C06-7D6E-431D-B037-A3794096E42C}
+	EndGlobalSection
+EndGlobal
