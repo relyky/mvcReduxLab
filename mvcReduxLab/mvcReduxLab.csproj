@@ -373,6 +373,7 @@
     <Content Include="Scripts\React\ReactLab\Demo\Counter.js" />
     <Content Include="Scripts\React\ReactLab\Demo\InputMirror.js" />
     <Content Include="Scripts\React\ReactLab\Demo\Lister.js" />
+    <Content Include="Scripts\React\ReactLab\Demo\MyInput.js" />
     <Content Include="Scripts\React\ReactLab\Demo\RepoSearch.js" />
     <Content Include="Scripts\React\ReactLab\Demo\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />

@@ -6,6 +6,7 @@ import Counter from './Counter.js'
 import InputMirror from './InputMirror.js'
 import Lister from './Lister.js'
 import RepoSearch from './RepoSearch.js'
+import MyInput from './MyInput.js'
 
 class App extends React.Component {
     constructor(props) {
@@ -34,6 +35,8 @@ class App extends React.Component {
                     <label><input type="checkbox" name="showLister" checked={showLister} onChange={this.handleInputChange} /> Lister</label>&nbsp;
                     <label><input type="checkbox" name="showRepoSearch" checked={showRepoSearch} onChange={this.handleInputChange} /> RepoSearch</label>&nbsp;
                 </div>
+            
+                <MyInput/>
 
                 {showCounter && <Counter />}
 
