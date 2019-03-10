@@ -25,27 +25,46 @@ class Lister extends Component {
                     <span>&nbsp;按Enter新增</span>
                 </p>
 
-                <ul>
-                    {itemList.map((item, index) => {
-                        console.log('render item', { item, index })
-                        return (
-                            <li key={index} onClick={(e) => this.removeItem(item, index)}>{index} {item}</li>
-                        )
-                    })}
+                <ul class="list-group">
+                    {itemList.map((item, index) =>
+                        <li className="list-group-item" key={index} onClick={(e) => this.updateItem(item, index)}>
+                            {index} {item.name}&nbsp;
+                            <span class="badge badge-primary badge-pill">{item.count}</span>
+                            <button className="btn btn-danger float-right" onClick={(e) => this.removeItem(item, index)}>移除</button>
+                        </li>
+                    )}
                 </ul>
+
+                {/*
+                <ul class="list-group">
+                    <li class="list-group-item ">
+                        Ads
+                        <span class="badge badge-primary badge-pill">50</span>
+                        <button class="btn btn-danger float-right">Remove</button>
+                    </li>
+                    <li class="list-group-item ">
+                        Junk
+                        <span class="badge badge-primary badge-pill">99</span>
+                        <button class="btn btn-danger float-right">Remove</button>
+                    </li>
+                </ul>
+                */}
 
             </div>
         )
     }
 
     removeItem(item, index) {
-        console.log('removeItem', { item, index })
         this.props.dispRemoveItem(index)
     }
 
     addItem(newItem) {
-        console.log('addItem', { newItem })
         this.props.dispInsertItem(newItem)
+    }
+
+    updateItem(item, index) {
+        item.count = item.count + 1 // 設定新值
+        this.props.dispUpdateItem(index, item)
     }
 
     handleKeyUp(e) {
@@ -54,7 +73,10 @@ class Lister extends Component {
             const target = e.target
             console.log('handleKeyUp:Enter', target.value);
 
-            const newItem = target.value
+            const newItem = {
+                name: target.value,
+                count:0
+            }
             this.addItem(newItem)
 
             // reset the target Input

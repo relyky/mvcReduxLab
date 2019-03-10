@@ -1,7 +1,14 @@
 ﻿import { Ks } from 'CommonFF/actions.js'
 
 /// itemList
-const initialState = ['Apple', 'Samsung', 'Sony', 'ASUS']
+//const initialState = ['Apple', 'Samsung', 'Sony', 'ASUS']
+
+const initialState = [
+    { name: 'Apple', count: 0 },
+    { name: 'Samsung', count: 0 },
+    { name: 'Sony', count: 0 },
+    { name: 'ASUS', count: 0 }
+]
 
 export default function listerReducer(state = initialState, action) {
     //console.log('listerReducer', state, action)
