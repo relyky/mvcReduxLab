@@ -384,6 +384,7 @@
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
     <Content Include="Scripts\React\ReduxLab\Counter\app.js" />
     <Content Include="Scripts\React\ReduxLab\Counter\AppForm.js" />
+    <Content Include="Scripts\React\ReduxLab\Counter\CounterF.js" />
     <Content Include="Scripts\React\ReduxLab\Counter\Counter.js" />
     <Content Include="Scripts\React\ReduxLab\Counter\reducers\counterReducer.js" />
     <Content Include="Scripts\React\ReduxLab\Counter\reducers\store.js" />

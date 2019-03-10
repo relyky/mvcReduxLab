@@ -1,8 +1,8 @@
 ﻿import { Ks } from 'CommonFF/actions.js'
 
 const initialState = {
-    likeCount: 0,
-    dislikeCount: 0
+    count: 0,
+    num: 3, 
 }
 
 export default function counterReducer(state = initialState, action) 
@@ -18,10 +18,12 @@ export default function counterReducer(state = initialState, action)
         case Ks.ASSIGN_VALUE:
             return { ...state, [action.name]: action.value }
             //return Object.assign({}, state, { [action.name]: action.value });
-        case 'INCREASE_LIKE':
-            return { ...state, likeCount: state.likeCount + 1 }
-        case 'INCREASE_DISLIKE':
-            return { ...state, dislikeCount: state.dislikeCount + 1 }
+        case Ks.ASSIGN_STATE_PROPS:
+            return { ...state, ...(action.properties) }
+        case 'INCREASE_COUNT':
+            return { ...state, count: state.count + 1 }
+        case 'DECREASE_COUNT':
+            return { ...state, count: state.count - 1 }
         default:
             return state;
     }

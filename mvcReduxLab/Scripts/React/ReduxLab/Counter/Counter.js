@@ -1,36 +1,26 @@
 ﻿import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Ks } from 'CommonFF/actions.js'
 
 class Counter extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            count: 0,
-            num: 3        
-        }
-
-        this.handleIncrement = this.handleIncrement.bind(this)
-        this.handleDecrement = this.handleDecrement.bind(this)
         this.handleAdd = this.handleAdd.bind(this)
         this.handleInputChange = this.handleInputChange.bind(this)
-        this.handleValueChange = this.handleValueChange.bind(this)
-    }
-
-    componentDidMount() {
-        this.setState({ count: 99 })
     }
 
     render() {
+        const { countInfo, dispatch } = this.props
         return (
             <div className="container">
-                <h2>§ Counter</h2>
-                <p>Count: {this.state.count}</p>
-                <p>Num: {this.state.num}</p>
-                <button onClick={this.handleIncrement}>加１</button>
-                <button onClick={this.handleDecrement}>減１</button>
+                <h2>§ Redux Counter</h2>
+                <p>Count: {countInfo.count}</p>
+                <p>Num: {countInfo.num}</p>
+                <button onClick={() => dispatch({ type: 'INCREASE_COUNT' })}>加１</button>
+                <button onClick={() => dispatch({ type: 'DECREASE_COUNT' })}>減１</button>
                 <br /><br />
-                <input type="number" name="num" value={this.state.num} onChange={this.handleInputChange} />
+                <input type="number" name="num" value={countInfo.num} onChange={this.handleInputChange} />
                 <button onClick={this.handleAdd}>加我</button>
 
                 <hr />
@@ -43,38 +33,49 @@ class Counter extends Component {
         const value = target.type === 'checkbox' ? target.checked : target.value
         const name = target.name
 
-        this.setState({
-            [name]: value
-        })
-    }
-
-    handleValueChange(name, value) {
-        this.setState({
-            [name]: value
-        })
-    }
-
-    handleIncrement(e) {
-        // 取環境參數
-        const { count } = this.state
-        // To proceed
-        this.setState({ count: count + 1 })
-    }
-
-    handleDecrement(e) {
-        // 取環境參數
-        const { count } = this.state
-        // To proceed
-        this.setState({ count: count - 1 })
+        this.props.handleValueChange(name, value)
+        //this.setState({ [name]: value })
     }
 
     handleAdd(e) {
-        // 取環境參數
-        const { count, num } = this.state
-        console.log('handleAdd', { count, num })
-        // To proceed
-        this.setState({ count: count + Number(num) })
+        const { countInfo } = this.props
+        this.props.assignStateProps({
+            count: countInfo.count + Number(countInfo.num)
+        })
     }
 }
 
-export default Counter;
+// connect to Store
+const mapStateToProps = (state, ownProps) => {
+    return {
+        countInfo: state.countInfo
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    const targetReducer = 'counterReducer'
+    return {
+        dispatch,
+        handleValueChange: (name, value) => {
+            dispatch({
+                type: Ks.ASSIGN_VALUE,
+                name,
+                value,
+                targetReducer
+            })
+        },
+        assignStateProps: (properties) => {
+            dispatch({
+                type: Ks.ASSIGN_STATE_PROPS,
+                properties,
+                targetReducer
+            })
+        }
+    }
+}
+
+//export default Counter;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Counter);
