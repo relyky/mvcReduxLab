@@ -1,6 +1,7 @@
 ﻿import React from 'react'
 import { connect } from 'react-redux'
 import AppHelper from 'CommonFF/AppHelper.js'
+import TitleWidget from './widgets/TitleWidget.js'
 import Counter from './Counter.js'
 
 class AppForm extends React.Component {
@@ -13,6 +14,7 @@ class AppForm extends React.Component {
         return (
             <div>
                 <AppHelper appInfo={globalappinfo} noInitFormMode />
+                <TitleWidget appTitle={globalappinfo.appTitle} /> 
                 <Counter />
             </div>
         )

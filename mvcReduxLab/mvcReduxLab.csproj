@@ -206,7 +206,7 @@
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
     <Compile Include="Areas\ReactLab\ReactLabAreaRegistration.cs" />
-    <Compile Include="Areas\ReduxLab\Controllers\CounterController.cs" />
+    <Compile Include="Areas\ReduxLab\Controllers\Demo2Controller.cs" />
     <Compile Include="Areas\ReduxLab\ReduxLabAreaRegistration.cs" />
     <Compile Include="Controllers\CommonDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -327,8 +327,7 @@
     <Content Include="Areas\ReactLab\Views\_ViewStart.cshtml" />
     <Content Include="Areas\ReduxLab\Views\web.config" />
     <Content Include="Areas\ReduxLab\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\ReduxLab\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\ReduxLab\Views\Counter\Default.cshtml" />
+    <Content Include="Areas\ReduxLab\Views\Demo2\Default.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -382,12 +381,12 @@
     <Content Include="Scripts\React\ReactLab\Demo\RepoSearch.js" />
     <Content Include="Scripts\React\ReactLab\Demo\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
-    <Content Include="Scripts\React\ReduxLab\Counter\app.js" />
-    <Content Include="Scripts\React\ReduxLab\Counter\AppForm.js" />
-    <Content Include="Scripts\React\ReduxLab\Counter\CounterF.js" />
-    <Content Include="Scripts\React\ReduxLab\Counter\Counter.js" />
-    <Content Include="Scripts\React\ReduxLab\Counter\reducers\counterReducer.js" />
-    <Content Include="Scripts\React\ReduxLab\Counter\reducers\store.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\app.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\AppForm.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\Counter.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\reducers\counterReducer.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\reducers\store.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\webpack.config.js">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

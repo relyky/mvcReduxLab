@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace mvcReduxLab.Areas.ReduxLab.Controllers
 {
-    public class CounterController : Controller
+    public class Demo2Controller : Controller
     {
         // GET: ReduxLab/Counter
         public ActionResult Default()
