@@ -1,5 +1,4 @@
 ﻿import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 class Lister extends Component {
     constructor(props) {

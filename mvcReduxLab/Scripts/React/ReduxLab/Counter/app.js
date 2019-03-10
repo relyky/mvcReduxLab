@@ -1,28 +1,21 @@
 ﻿import "babel-polyfill";
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import AppForm from './AppForm.js'
+import store from './reducers/store.js'
 
 class App extends React.Component {
     constructor(props) {
         super(props)
-
-        /// 注意：state 必需是物件
-        this.state = {
-            hello: ''
-        }
-    }
-
-    /// 官方建議初始化地點
-    componentDidMount() {
-        this.setState({ hello: 'Hi, I am Redux first demo.'})
     }
 
     render() {
         return (
-            <div>
-                {this.state.hello}
-            </div>
-        );
+            <Provider store={store}>
+                <AppForm />
+            </Provider>
+        )
     }
 }
 
