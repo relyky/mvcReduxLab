@@ -9,11 +9,9 @@ var sysFuncIds = new [] {
 	new { name = "ReactLab", funcIds = new string[] {
 		"Hello","Demo"
 	}},
-	//new { name = "MA00", funcIds = new string[] {
-	//	"MA000201",
-	//	"MA000202",
-	//	"MA000203"
-	//}},
+	new { name = "ReduxLab", funcIds = new string[] {
+		"Counter"
+	}}
 };
 #>
 var path = require('path');

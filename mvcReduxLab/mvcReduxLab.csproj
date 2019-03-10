@@ -206,6 +206,8 @@
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
     <Compile Include="Areas\ReactLab\ReactLabAreaRegistration.cs" />
+    <Compile Include="Areas\ReduxLab\Controllers\CounterController.cs" />
+    <Compile Include="Areas\ReduxLab\ReduxLabAreaRegistration.cs" />
     <Compile Include="Controllers\CommonDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -323,6 +325,10 @@
     <Content Include="Areas\ReactLab\Views\Hello\Default.cshtml" />
     <Content Include="Areas\ReactLab\Views\Demo\Default.cshtml" />
     <Content Include="Areas\ReactLab\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ReduxLab\Views\web.config" />
+    <Content Include="Areas\ReduxLab\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ReduxLab\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ReduxLab\Views\Counter\Default.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -377,6 +383,7 @@
     <Content Include="Scripts\React\ReactLab\Demo\RepoSearch.js" />
     <Content Include="Scripts\React\ReactLab\Demo\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
+    <Content Include="Scripts\React\ReduxLab\Counter\app.js" />
     <Content Include="Scripts\React\webpack.config.js">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -450,6 +457,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\BS4\Models\" />
     <Folder Include="Areas\ReactLab\Models\" />
+    <Folder Include="Areas\ReduxLab\Models\" />
     <Folder Include="Scripts\bundle\" />
   </ItemGroup>
   <ItemGroup>
