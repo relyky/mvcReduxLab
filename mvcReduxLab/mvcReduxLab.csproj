@@ -384,7 +384,9 @@
     <Content Include="Scripts\React\ReduxLab\Demo2\app.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\AppForm.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\Counter.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\Hello2.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\Lister.js" />
+    <Content Include="Scripts\React\ReduxLab\Demo2\reducers\helloReducer.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\counterReducer.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\listerReducer.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\store.js" />

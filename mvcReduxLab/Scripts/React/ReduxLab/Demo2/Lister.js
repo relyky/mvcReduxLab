@@ -25,12 +25,15 @@ class Lister extends Component {
                     <span>&nbsp;按Enter新增</span>
                 </p>
 
-                <ul class="list-group">
+                <ul className="list-group">
                     {itemList.map((item, index) =>
-                        <li className="list-group-item" key={index} onClick={(e) => this.updateItem(item, index)}>
+                        <li className="list-group-item" key={index}>
                             {index} {item.name}&nbsp;
-                            <span class="badge badge-primary badge-pill">{item.count}</span>
-                            <button className="btn btn-danger float-right" onClick={(e) => this.removeItem(item, index)}>移除</button>
+                            <span className="badge badge-primary badge-pill">{item.count}</span>
+                            <div class="btn-group float-right">
+                                <button className="btn btn-primary" onClick={(e) => this.updateItem(item, index)}>讚</button>
+                                <button className="btn btn-danger" onClick={(e) => this.removeItem(item, index)}>移除</button>
+                            </div>
                         </li>
                     )}
                 </ul>
@@ -107,8 +110,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         }
     }
 }
-
-
 
 //export default Lister;
 export default connect(

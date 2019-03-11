@@ -1,13 +1,13 @@
-﻿import "babel-polyfill";
-import React from 'react'
-import ReactDOM from 'react-dom'
+﻿import "babel-polyfill"
+import React, { Component } from "react"
+import ReactDOM from "react-dom"
 import { Provider } from 'react-redux'
-import AppForm from './AppForm.js'
 import store from './reducers/store.js'
+import AppForm from './AppForm.js'
 
-class App extends React.Component {
+class App extends Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     render() {
@@ -15,11 +15,11 @@ class App extends React.Component {
             <Provider store={store}>
                 <AppForm />
             </Provider>
-        )
+        );
     }
 }
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('app')
 );

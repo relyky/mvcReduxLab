@@ -8,7 +8,7 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
 {
     public class Demo2Controller : Controller
     {
-        // GET: ReduxLab/Counter
+        // GET: ReduxLab/Demo2
         public ActionResult Default()
         {
             return View();

@@ -4,6 +4,7 @@ import AppHelper from 'CommonFF/AppHelper.js'
 import TitleWidget from './widgets/TitleWidget.js'
 import Counter from './Counter.js'
 import Lister from './Lister.js'
+import Hello2 from './Hello2.js'
 
 class AppForm extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class AppForm extends React.Component {
 
         /// 注意：state 必需是物件
         this.state = {
+            showHello2: true,
             showCounter: false,
             showLister: false,
         }
@@ -19,23 +21,23 @@ class AppForm extends React.Component {
     }
 
     render() {
-        const { showCounter, showLister } = this.state
-        //console.log('AppForm.render', { props: this.props })
+        const { showHello2, showCounter, showLister } = this.state
         return (
             <div>
                 <AppHelper appInfo={globalappinfo} noInitFormMode />
                 <TitleWidget appTitle={globalappinfo.appTitle} /> 
                 <div className="container">
                     <label>勾選展示項目：</label>
+                    <label><input type="checkbox" name="showHello2" checked={showHello2} onChange={this.handleInputChange} /> Redux Hello</label>&nbsp;
                     <label><input type="checkbox" name="showCounter" checked={showCounter} onChange={this.handleInputChange} /> Counter</label>&nbsp;
                     <label><input type="checkbox" name="showLister" checked={showLister} onChange={this.handleInputChange} /> Lister</label>&nbsp;
                 </div>
 
+                {showHello2 && <Hello2 />}
+
                 {showCounter && <Counter />}
 
                 {showLister && <Lister />}
-
-
 
             </div>
         )
