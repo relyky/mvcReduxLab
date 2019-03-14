@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace mvcReduxLab.Areas.ReduxLab.Controllers
 {
-    public class AccountInfoController : Controller
+    public class AccountAppController : Controller
     {
         // GET: ReduxLab/AccountInfo
         public ActionResult AppForm()

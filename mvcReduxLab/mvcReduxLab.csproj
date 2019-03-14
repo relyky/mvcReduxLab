@@ -213,7 +213,7 @@
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
     <Compile Include="Areas\ReactLab\ReactLabAreaRegistration.cs" />
-    <Compile Include="Areas\ReduxLab\Controllers\AccountInfoController.cs" />
+    <Compile Include="Areas\ReduxLab\Controllers\AccountAppController.cs" />
     <Compile Include="Areas\ReduxLab\Controllers\Demo2Controller.cs" />
     <Compile Include="Areas\ReduxLab\ReduxLabAreaRegistration.cs" />
     <Compile Include="Controllers\CommonDataController.cs" />
@@ -248,6 +248,10 @@
     <Compile Include="ViewModels\AccountInfoFormDataVM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MyDatabase.mdf" />
+    <Content Include="App_Data\MyDatabase_log.ldf">
+      <DependentUpon>MyDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -368,7 +372,7 @@
     <Content Include="Areas\BS4\Views\Grid\Default.cshtml" />
     <Content Include="Areas\BS4\Views\Modal\Default.cshtml" />
     <Content Include="Areas\BS4\Views\Navs\Default.cshtml" />
-    <Content Include="Areas\ReduxLab\Views\AccountInfo\AppForm.cshtml" />
+    <Content Include="Areas\ReduxLab\Views\AccountApp\AppForm.cshtml" />
     <Content Include="Areas\BS4\Views\HTML5\Input.cshtml" />
     <EntityDeploy Include="MyDatabaseModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -421,13 +425,13 @@
     <Content Include="Scripts\React\ReactLab\Demo\RepoSearch.js" />
     <Content Include="Scripts\React\ReactLab\Demo\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\FormViewAccount.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\app.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\AppForm.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\FormViewUser.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\reducers\userReducer.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\reducers\accountReducer.js" />
-    <Content Include="Scripts\React\ReduxLab\AccountInfo\reducers\store.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\FormViewAccount.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\app.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\AppForm.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\FormViewUser.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\reducers\userReducer.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\reducers\accountReducer.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\reducers\store.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\app.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\AppForm.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\Counter.js" />
@@ -507,7 +511,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\BS4\Models\" />
     <Folder Include="Areas\ReactLab\Models\" />
     <Folder Include="Areas\ReduxLab\Models\" />
