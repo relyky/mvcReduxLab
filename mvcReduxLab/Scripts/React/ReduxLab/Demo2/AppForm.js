@@ -1,7 +1,7 @@
 ﻿import React from 'react'
 import { connect } from 'react-redux'
 import AppHelper from 'CommonFF/AppHelper.js'
-import TitleWidget from './widgets/TitleWidget.js'
+import TitleWidget from 'Common/TitleWidget.js'
 import Counter from './Counter.js'
 import Lister from './Lister.js'
 import Hello2 from './Hello2.js'

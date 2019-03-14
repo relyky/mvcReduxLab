@@ -1,7 +1,9 @@
 ﻿import React from 'react'
 import { connect } from 'react-redux'
 import AppHelper from 'CommonFF/AppHelper.js'
-import TitleWidget from './widgets/TitleWidget.js'
+import TitleWidget from 'Common/TitleWidget.js'
+import FormViewAccount from './FormViewAccount.js'
+import FormViewUser from './FormViewUser.js'
 
 class AppForm extends React.Component {
     constructor(props) {
@@ -9,12 +11,11 @@ class AppForm extends React.Component {
 
         /// 注意：state 必需是物件
         this.state = {
-            showHello2: true,
-            showCounter: false,
-            showLister: false,
+
         }
 
-        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleSaveFormData = this.handleSaveFormData.bind(this)
+        this.handleLoadFormData = this.handleLoadFormData.bind(this)
     }
 
     render() {
@@ -24,32 +25,32 @@ class AppForm extends React.Component {
                 <AppHelper appInfo={globalappinfo} noInitFormMode />
                 <TitleWidget appTitle={globalappinfo.appTitle} />
 
-                <h1>Say Hi</h1>
+                <FormViewAccount />
+                <FormViewUser />
 
+                {/*<Commandbar />*/}
+                <div className="container">
+                    <button type="button" className="btn btn-primary btn-lg m-1" onClick={this.handleSaveFormData}>存檔</button>
+                    <button type="button" className="btn btn-warning btn-lg m-1" onClick={this.handleLoadFormData}>載入</button>
+                </div>
 
             </div>
         )
     }
-
-    handleInputChange(e) {
-        const target = e.target
-        const value = target.type === 'checkbox' ? target.checked : target.value
-        const name = target.name
-
-        this.setState({
-            [name]: value
-        })
-    }
-
 }
 
 // connect to Store
 const mapStateToProps = (state, ownProps) => ({
     appInfo: state.appInfo,
+    formData: {
+        accountInfo: state.accountInfo,
+        userInfo: state.userInfo
+    }
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    dispatch
+    dispatch,
+
 })
 
 //export default AppForm;
