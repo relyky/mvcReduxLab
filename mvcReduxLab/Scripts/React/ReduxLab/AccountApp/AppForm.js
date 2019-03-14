@@ -4,6 +4,8 @@ import AppHelper from 'CommonFF/AppHelper.js'
 import TitleWidget from 'Common/TitleWidget.js'
 import FormViewAccount from './FormViewAccount.js'
 import FormViewUser from './FormViewUser.js'
+import actions, { Ks } from 'CommonFF/actions.js'
+import apiClient from './apiClient.js'
 
 class AppForm extends React.Component {
     constructor(props) {
@@ -18,8 +20,7 @@ class AppForm extends React.Component {
         this.handleLoadFormData = this.handleLoadFormData.bind(this)
     }
 
-    render() {
-        const { showHello2, showCounter, showLister } = this.state
+    render() {        
         return (
             <div>
                 <AppHelper appInfo={globalappinfo} noInitFormMode />
@@ -37,6 +38,43 @@ class AppForm extends React.Component {
             </div>
         )
     }
+
+    handleSaveFormData() {
+        const { formData } = this.props
+        console.log('handleSaveFormData', { formData })
+
+        this.props.setBlocking(true)
+        apiClient.SaveFormData(formData).then((resp) => {
+            console.log('SaveFormData success', { resp })
+            swal.fire('SaveFormData success', 'success')
+        }).catch((xhr) => {
+            console.log('SaveFormData fail!', { xhr })
+            const err = xhr.response.data;
+            swal.fire('SaveFormData fail!', err.errMsg, 'error')
+        }).finally(() => {
+            this.props.setBlocking(false)
+        })
+    }
+
+    handleLoadFormData() {
+        const name = this.props.formData.accountInfo.name
+        console.log('handleLoadFormData', { name })
+
+        this.props.setBlocking(true)
+        const args = { name }
+        apiClient.LoadFormData(args).then((resp) => {
+            const formData = resp.data
+            console.log('LoadFormData success', { formData })
+            this.props.fillFormData(formData)
+            swal.fire('LoadFormData success', 'success')
+        }).catch((xhr) => {
+            console.log('LoadFormData fail!', { xhr })
+            const err = xhr.response.data;
+            swal.fire('LoadFormData fail!', err.errMsg, 'error')
+        }).finally(() => {
+            this.props.setBlocking(false)
+        })
+    }
 }
 
 // connect to Store
@@ -50,7 +88,12 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     dispatch,
-
+    setBlocking: (flag) => {
+        dispatch({ type: Ks.SET_BLOCKING, flag })
+    },
+    fillFormData: (formData) => {
+        dispatch({ type: Ks.FILL_FORM_DATA, formData })
+    }
 })
 
 //export default AppForm;

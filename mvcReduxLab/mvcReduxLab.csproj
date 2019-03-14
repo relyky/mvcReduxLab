@@ -246,6 +246,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AccountInfoFormDataVM.cs" />
+    <Compile Include="ViewModels\ErrorMessageVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MyDatabase.mdf" />
@@ -425,6 +426,7 @@
     <Content Include="Scripts\React\ReactLab\Demo\RepoSearch.js" />
     <Content Include="Scripts\React\ReactLab\Demo\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountApp\apiClient.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\FormViewAccount.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\app.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\AppForm.js" />

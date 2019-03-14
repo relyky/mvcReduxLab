@@ -21,6 +21,9 @@ export default function userReducer(state = initialState, action) {
         case Ks.ASSIGN_STATE_PROPS:
             /// action = { type, properties }
             return { ...state, ...(action.properties) }
+        case Ks.FILL_FORM_DATA:
+            /// action = { type, formData }
+            return { ...state, ...(action.formData.userInfo) }
         default:
             return state;
     }

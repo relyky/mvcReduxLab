@@ -21,7 +21,8 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return new HttpStatusCodeResult(400, "CheckDataFaill");
+                    Response.StatusCode = 400;
+                    return Json(ErrorMessageVM.CHECK_DATA_FAIL);
                 }
 
                 using (var ctx = new MyDatabaseEntities())
@@ -33,8 +34,8 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
                     {
                         //# 已存在則更新
                         //info.name = formData.accountInfo.name; // PK
-                        info.email = formData.accountInfo.email;
-                        info.mobilePhone = formData.accountInfo.mobilePhone;
+                        info.email = formData.accountInfo.email ?? "";
+                        info.mobilePhone = formData.accountInfo.mobilePhone ?? "";
                         info.birthday = formData.userInfo.birthday;
                         info.contactTime = formData.userInfo.contactTime;
                         info.remark = formData.userInfo.remark;
@@ -48,8 +49,8 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
                         Account newInfo = new Account()
                         {
                             name = formData.accountInfo.name,
-                            email = formData.accountInfo.email,
-                            mobilePhone = formData.accountInfo.mobilePhone,
+                            email = formData.accountInfo.email ?? "",
+                            mobilePhone = formData.accountInfo.mobilePhone ?? "",
                             birthday = formData.userInfo.birthday,
                             contactTime = formData.userInfo.contactTime,
                             remark = formData.userInfo.remark
@@ -60,12 +61,13 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
                         txn.Commit();
                     }
                 }
-
-                return new HttpStatusCodeResult(200);
+                
+                return Json(ErrorMessageVM.SUCCESS);
             }
             catch (Exception ex)
             {
-                return new HttpStatusCodeResult(500, ex.Message);
+                Response.StatusCode = 500;
+                return Json(new ErrorMessageVM(ex.Message));
             }
         }
 
@@ -76,7 +78,8 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return new HttpStatusCodeResult(400, "CheckDataFaill");
+                    Response.StatusCode = 400;
+                    return Json(ErrorMessageVM.CHECK_DATA_FAIL);
                 }
 
                 using (var ctx = new MyDatabaseEntities())
@@ -84,7 +87,10 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
                     var info = ctx.Account.SingleOrDefault(c => c.name == name);
 
                     if (info == null)
-                        return new HttpStatusCodeResult(500, "無資料！");
+                    {
+                        Response.StatusCode = 500;
+                        return Json(new ErrorMessageVM("無資料。"));
+                    }
 
                     AccountInfoFormDataVM formData = new AccountInfoFormDataVM()
                     {
@@ -107,7 +113,8 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
             }
             catch (Exception ex)
             {
-                return new HttpStatusCodeResult(500, ex.Message);
+                Response.StatusCode = 500;
+                return Json(new ErrorMessageVM(ex.Message));
             }
         }
     }
