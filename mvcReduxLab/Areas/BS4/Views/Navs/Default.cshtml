@@ -1,0 +1,122 @@
+﻿@{
+    TempData["Title"] = "Bootstrap 4 Toggleable / Dynamic Pills";
+}
+<h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
+
+<div class="container">
+    <!-- Nav pills -->
+    <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu3">動態總覽</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu4">船舶明細</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu5">進港預報</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu6">實際進港</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu7">出港預報</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu8">實際出港</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="home" class="container tab-pane active">
+            <br>
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade">
+            <br>
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="container tab-pane fade">
+            <br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="container tab-pane fade">
+            <br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Default</td>
+                        <td>Defaultson</td>
+                        <td>def@somemail.com</td>
+                    </tr>
+                    <tr class="table-primary">
+                        <td>Primary</td>
+                        <td>Joe</td>
+                        <td>joe@example.com</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td>Success</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>Danger</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>Info</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>Warning</td>
+                        <td>Refs</td>
+                        <td>bo@example.com</td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Active</td>
+                        <td>Activeson</td>
+                        <td>act@example.com</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Secondary</td>
+                        <td>Secondson</td>
+                        <td>sec@example.com</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Light</td>
+                        <td>Angie</td>
+                        <td>angie@example.com</td>
+                    </tr>
+                    <tr class="table-dark text-dark">
+                        <td>Dark</td>
+                        <td>Bo</td>
+                        <td>bo@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

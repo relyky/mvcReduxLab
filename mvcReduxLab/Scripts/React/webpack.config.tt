@@ -10,7 +10,7 @@ var sysFuncIds = new [] {
 		"Hello","Demo"
 	}},
 	new { name = "ReduxLab", funcIds = new string[] {
-		"Demo2"
+		"Demo2","AccountInfo"
 	}}
 };
 #>
