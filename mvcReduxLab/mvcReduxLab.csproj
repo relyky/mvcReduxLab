@@ -203,6 +203,7 @@
     <Compile Include="Areas\BS4\BS4AreaRegistration.cs" />
     <Compile Include="Areas\BS4\Controllers\ButtonsController.cs" />
     <Compile Include="Areas\BS4\Controllers\GridController.cs" />
+    <Compile Include="Areas\BS4\Controllers\HTML5Controller.cs" />
     <Compile Include="Areas\BS4\Controllers\ModalController.cs" />
     <Compile Include="Areas\BS4\Controllers\NavsController.cs" />
     <Compile Include="Areas\BS4\Controllers\TypographyController.cs" />
@@ -340,6 +341,7 @@
     <Content Include="Areas\BS4\Views\Modal\Default.cshtml" />
     <Content Include="Areas\BS4\Views\Navs\Default.cshtml" />
     <Content Include="Areas\ReduxLab\Views\AccountInfo\AppForm.cshtml" />
+    <Content Include="Areas\BS4\Views\HTML5\Input.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -394,6 +396,7 @@
     <Content Include="Scripts\React\ReactLab\Demo\widgets\TitleWidget.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
     <Content Include="Scripts\React\ReduxLab\AccountInfo\app.js" />
+    <Content Include="Scripts\React\ReduxLab\AccountInfo\AppForm.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\app.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\AppForm.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\Counter.js" />

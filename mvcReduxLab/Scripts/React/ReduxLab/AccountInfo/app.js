@@ -1,32 +1,25 @@
-﻿import "babel-polyfill";
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+﻿import "babel-polyfill"
+import React, { Component } from "react"
+import ReactDOM from "react-dom"
+import { Provider } from 'react-redux'
+import store from './reducers/store.js'
+import AppForm from './AppForm.js'
 
-class App extends React.Component {
+class App extends Component {
     constructor(props) {
-        super(props)
-
-        /// 注意：state 必需是物件
-        this.state = {
-            hello: ''
-        }
-    }
-
-    /// 官方建議初始化地點
-    componentDidMount() {
-        this.setState({ hello: 'Hi, I am AccountInfo'})
+        super(props);
     }
 
     render() {
         return (
-            <div>
-                {this.state.hello}
-            </div>
+            <Provider store={store}>
+                <AppForm />
+            </Provider>
         );
     }
 }
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('app')
 );
