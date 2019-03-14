@@ -1,0 +1,23 @@
+﻿@{
+    TempData["Title"] = "Bootstrap 4 Grid Lab";
+}
+<h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
+
+<div class="container-fluid">
+    <p>說明：responsive tiers/響應層：有五種尺寸xl,lg,md,sm,xs</p>
+    <div class="d-block d-sm-none" style="background-color:lavender;"><h1 class="text-center">xs, &lt;576px, 手機</h1></div>
+    <div class="d-none d-sm-block d-md-none" style="background-color:orange;"><h1 class="text-center">sm, &ge;576px, 大手機/小平板</h1></div>
+    <div class="d-none d-md-block d-lg-none" style="background-color:yellowgreen;"><h1 class="text-center">md, &ge;768px, 平板</h1></div>
+    <div class="d-none d-lg-block d-xl-none" style="background-color:greenyellow;"><h1 class="text-center">lg, &ge;992px, 筆電</h1></div>
+    <div class="d-none d-xl-block" style="background-color:cyan;"><h1 class="text-center">xl, &ge;1200px, 寬螢幕</h1></div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-xl-1" style="background-color:lavender;"><h1>THIS</h1></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color:orange;"><h1>IS</h1></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color:yellowgreen;"><h1>A</h1></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color:greenyellow;"><h1>NICE</h1></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color:cyan;"><h1>BOOK</h1></div>
+    </div>
+</div>
