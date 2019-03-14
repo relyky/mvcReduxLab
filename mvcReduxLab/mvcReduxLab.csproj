@@ -203,6 +203,7 @@
     <Compile Include="Areas\BS4\BS4AreaRegistration.cs" />
     <Compile Include="Areas\BS4\Controllers\ButtonsController.cs" />
     <Compile Include="Areas\BS4\Controllers\GridController.cs" />
+    <Compile Include="Areas\BS4\Controllers\ModalController.cs" />
     <Compile Include="Areas\BS4\Controllers\TypographyController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
@@ -330,6 +331,7 @@
     <Content Include="Areas\ReduxLab\Views\_ViewStart.cshtml" />
     <Content Include="Areas\ReduxLab\Views\Demo2\Default.cshtml" />
     <Content Include="Areas\BS4\Views\Grid\Default.cshtml" />
+    <Content Include="Areas\BS4\Views\Modal\Default.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
