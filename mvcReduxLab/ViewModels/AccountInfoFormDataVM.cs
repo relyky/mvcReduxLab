@@ -29,6 +29,4 @@ namespace mvcReduxLab.ViewModels
         #endregion
 
     }
-
-
 }

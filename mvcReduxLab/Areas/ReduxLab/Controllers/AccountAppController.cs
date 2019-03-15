@@ -15,6 +15,7 @@ namespace mvcReduxLab.Areas.ReduxLab.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult SaveFormData(AccountInfoFormDataVM formData)
         {
             try

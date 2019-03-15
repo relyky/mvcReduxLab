@@ -1,7 +1,11 @@
 ﻿import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Ks } from 'CommonFF/actions.js'
+import actions, { Ks } from 'CommonFF/actions.js'
 
+// 環境參數
+const targetReducer = 'counterReducer'
+
+//-----------------------------------------------------------------------------
 class Counter extends Component {
     constructor(props) {
         super(props);
@@ -29,19 +33,26 @@ class Counter extends Component {
     }
 
     handleInputChange(e) {
+        console.log('handleInputChange')
+
         const target = e.target
         const value = target.type === 'checkbox' ? target.checked : target.value
         const name = target.name
 
-        this.props.handleValueChange(name, value)
-        //this.setState({ [name]: value })
+        //# dispatch(action) 二種方法
+        this.props.dispatch(actions.assignValue(name, value, targetReducer))
+        //this.props.dispatch({ type: Ks.ASSIGN_VALUE, name, value, targetReducer })
     }
 
     handleAdd(e) {
+        console.log('handleAdd')
         const { countInfo } = this.props
-        this.props.assignStateProps({
-            count: countInfo.count + Number(countInfo.num)
-        })
+
+        const properties = { count: countInfo.count + Number(countInfo.num) }
+
+        //# dispatch(action) 二種方法
+        //this.props.dispatch(actions.assignStateProps(properties, targetReducer))
+        this.props.dispatch({ type: Ks.ASSIGN_STATE_PROPS, properties, targetReducer })
     }
 }
 
@@ -53,24 +64,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    const targetReducer = 'counterReducer'
     return {
         dispatch,
-        handleValueChange: (name, value) => {
-            dispatch({
-                type: Ks.ASSIGN_VALUE,
-                name,
-                value,
-                targetReducer
-            })
-        },
-        assignStateProps: (properties) => {
-            dispatch({
-                type: Ks.ASSIGN_STATE_PROPS,
-                properties,
-                targetReducer
-            })
-        }
     }
 }
 
