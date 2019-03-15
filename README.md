@@ -3,9 +3,9 @@ MVC5 + React + Redux
 React: version 16
 
 ## 文件
-Overview https://quip.com/bKEjAXLuVs6V/Overview  
-第一天課程 https://quip.com/56hbAukaQ2qA  
-第二天課程 https://quip.com/nrNqASIoPT7R  
+[Overview](https://quip.com/bKEjAXLuVs6V/Overview)  
+[第一天課程](https://quip.com/56hbAukaQ2qA)  
+[第二天課程](https://quip.com/nrNqASIoPT7R)   
   
 ## § appendidx
 [Redux Tutorial - Learn React/Redux in one video](https://www.youtube.com/watch?v=OSSpVLpuVWA&t=50s)  
