@@ -1,5 +1,6 @@
 # mvcReduxLab
-MVC5 + React + Redux
+MVC5 + React + Redux  
+React: version 16
 
 ## § appendidx
 [Redux Tutorial - Learn React/Redux in one video](https://www.youtube.com/watch?v=OSSpVLpuVWA&t=50s)  
