@@ -1,0 +1,14 @@
+﻿@{
+    TempData["FunctionId"] = @"ReduxLabReduxHello"; // <-- 請變更
+    TempData["Title"] = @"Redux Hello"; // <-- 請變更
+    TempData["Breadcrumb"] = @"";
+    TempData["EntryFormNo"] = Convert.ToString(ViewContext.RouteData.Values["id"]).ToUpper();
+    TempData["EntryMode"] = Convert.ToString(ViewContext.RouteData.Values["mode"] ?? "INIT").ToUpper();
+    TempData["AntiForgeryToken"] = ViewFunctions.GetAntiForgeryToken();
+}
+
+<div id="app"></div>
+
+@section scripts{
+    @Html.Partial("~/Views/Shared/_ReactAppInit.cshtml")
+}

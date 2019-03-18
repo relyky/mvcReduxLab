@@ -7,6 +7,7 @@ module.exports = [
 		reactlabdemo:'./ReactLab/Demo/app.js',
 		reduxlabdemo2:'./ReduxLab/Demo2/app.js',
 		reduxlabaccountapp:'./ReduxLab/AccountApp/app.js',
+		reduxlabreduxhello:'./ReduxLab/ReduxHello/app.js',
 	},
     output: {
         path: path.resolve(__dirname, '../bundle/'),

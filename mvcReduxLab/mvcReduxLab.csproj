@@ -215,6 +215,7 @@
     <Compile Include="Areas\ReactLab\ReactLabAreaRegistration.cs" />
     <Compile Include="Areas\ReduxLab\Controllers\AccountAppController.cs" />
     <Compile Include="Areas\ReduxLab\Controllers\Demo2Controller.cs" />
+    <Compile Include="Areas\ReduxLab\Controllers\ReduxHelloController.cs" />
     <Compile Include="Areas\ReduxLab\ReduxLabAreaRegistration.cs" />
     <Compile Include="Controllers\CommonDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -382,6 +383,7 @@
     <Content Include="MyDatabaseModel.edmx.diagram">
       <DependentUpon>MyDatabaseModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\ReduxLab\Views\ReduxHello\Default.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -443,6 +445,11 @@
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\counterReducer.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\listerReducer.js" />
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\store.js" />
+    <Content Include="Scripts\React\ReduxLab\ReduxHello\app.js" />
+    <Content Include="Scripts\React\ReduxLab\ReduxHello\AppForm.js" />
+    <Content Include="Scripts\React\ReduxLab\ReduxHello\Hello2.js" />
+    <Content Include="Scripts\React\ReduxLab\ReduxHello\reducers\helloReducer.js" />
+    <Content Include="Scripts\React\ReduxLab\ReduxHello\reducers\store.js" />
     <Content Include="Scripts\React\webpack.config.js">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
