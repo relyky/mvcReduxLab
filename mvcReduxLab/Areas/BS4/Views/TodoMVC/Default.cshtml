@@ -14,30 +14,67 @@
 <h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
 
 <div class="container">
-    <h2>&lt;h1&gt; - &lt;h6&gt;</h2>
-    <p>TodoMVC 樣板</p>
-</div>
-
-
-<div class="container">
-    <h1 class="display-2 mx-auto">Todo MVC</h1>
+    <h1 class="display-2 text-center">todos</h1>
 
     <!-- input & check all -->
     <div class="input-group">
         <div class="input-group-prepend">
             <div class="input-group-text">
-                <label class="form-check-label" style="font-size:2em" title="Check all">
+                <label class="form-check-label text-black-50" style="font-size:2em" title="Check all">
                     <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
                     <i class="fa fa-check" aria-hidden="true"></i>
                 </label>
             </div>
         </div>
-        <input type="text" class="form-control" style="font-size:2em">
+        <input type="text" class="form-control" style="font-size:2em" placeholder="What needs to bo done?">
     </div>
 
     <!-- input & check all -->
-
-
+    <ul class="list-group" style="font-size:2em">
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">完成方案第二版</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">到超市買蘋果</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">晚上六點吃早餐</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">交報告給老闆</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+    </ul>
+    
+    
+    
 
 </div>
 
