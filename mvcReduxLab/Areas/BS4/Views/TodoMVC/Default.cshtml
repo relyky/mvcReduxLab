@@ -1,0 +1,57 @@
+﻿@{
+    TempData["Title"] = "TodoMVC 樣板";
+}
+
+<style type="text/css">
+    .rkm-hide-checkbox {
+        text-align: center;
+        border: none;
+        opacity: 0;
+        position: absolute;
+    }
+</style>
+
+<h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
+
+<div class="container">
+    <h2>&lt;h1&gt; - &lt;h6&gt;</h2>
+    <p>TodoMVC 樣板</p>
+</div>
+
+
+<div class="container">
+    <h1 class="display-2 mx-auto">Todo MVC</h1>
+
+    <!-- input & check all -->
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <label class="form-check-label" style="font-size:2em" title="Check all">
+                    <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </label>
+            </div>
+        </div>
+        <input type="text" class="form-control" style="font-size:2em">
+    </div>
+
+    <!-- input & check all -->
+
+
+
+</div>
+
+<!-- 按讚 -->
+<div class="container">
+    <div class="text-center">
+        <button class="btn btn-light">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>&nbsp;讚
+            <span class="badge badge-pill badge-info">99</span>
+        </button>
+        <button class="btn btn-light">
+            <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>&nbsp;遜
+            <span class="badge badge-pill badge-info">88</span>
+        </button>
+    </div>
+</div>
+

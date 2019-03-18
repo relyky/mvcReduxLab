@@ -209,6 +209,7 @@
     <Compile Include="Areas\BS4\Controllers\HTML5Controller.cs" />
     <Compile Include="Areas\BS4\Controllers\ModalController.cs" />
     <Compile Include="Areas\BS4\Controllers\NavsController.cs" />
+    <Compile Include="Areas\BS4\Controllers\TodoMVCController.cs" />
     <Compile Include="Areas\BS4\Controllers\TypographyController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
@@ -384,6 +385,7 @@
       <DependentUpon>MyDatabaseModel.edmx</DependentUpon>
     </Content>
     <Content Include="Areas\ReduxLab\Views\ReduxHello\Default.cshtml" />
+    <Content Include="Areas\BS4\Views\TodoMVC\Default.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
