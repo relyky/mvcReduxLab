@@ -50,7 +50,7 @@ class AppForm extends React.Component {
         }).catch((xhr) => {
             console.log('SaveFormData fail!', { xhr })
             const err = xhr.response.data;
-            swal.fire('SaveFormData fail!', err.errMsg, 'error')
+            swal.fire('SaveFormData fail!')
         }).finally(() => {
             this.props.setBlocking(false)
         })
@@ -70,7 +70,7 @@ class AppForm extends React.Component {
         }).catch((xhr) => {
             console.log('LoadFormData fail!', { xhr })
             const err = xhr.response.data;
-            swal.fire('LoadFormData fail!', err.errMsg, 'error')
+            swal.fire('LoadFormData fail!')
         }).finally(() => {
             this.props.setBlocking(false)
         })
