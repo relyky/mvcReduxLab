@@ -46,7 +46,17 @@
                 <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
                 <i class="fa fa-check-square-o" aria-hidden="true"></i>
             </label>
-            <span class="form-control-static">到超市買蘋果</span>
+            <span class="form-control-static"><s>到超市買蘋果</s></span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">到超商買哈蜜瓜</span>
             <button type="button" class="close" aria-label="Close">
                 <span aria-hidden="true" style="font-size:2em">&times;</span>
             </button>
@@ -72,14 +82,21 @@
             </button>
         </li>
     </ul>
-    
-    
-    
 
+    <!-- status bar -->
+    <div class="mt-1 text-center">
+        <span class="px-2 py-1 float-left">3 items left</span>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-primary active">All</button>
+            <button type="button" class="btn btn-outline-primary">Active</button>
+            <button type="button" class="btn btn-outline-primary">Completed</button>
+        </div>
+        <button type="button" class="btn btn-outline-primary float-right">Clear completed</button>
+    </div>
 </div>
 
 <!-- 按讚 -->
-<div class="container">
+<div class="container mt-3">
     <div class="text-center">
         <button class="btn btn-light">
             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>&nbsp;讚
