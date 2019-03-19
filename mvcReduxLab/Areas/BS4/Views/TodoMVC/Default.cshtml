@@ -1,0 +1,111 @@
+﻿@{
+    TempData["Title"] = "TodoMVC 樣板";
+}
+
+<style type="text/css">
+    .rkm-hide-checkbox {
+        text-align: center;
+        border: none;
+        opacity: 0;
+        position: absolute;
+    }
+</style>
+
+<h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
+
+<div class="container">
+    <h1 class="display-2 text-center">todos</h1>
+
+    <!-- input & check all -->
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <label class="form-check-label text-light" style="font-size:2em" title="Check all 若是全選顏色設為text-dark，否則為text-light">
+                    <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up 若是全選顏色設為text-dark，否則為text-light')">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </label>
+            </div>
+        </div>
+        <input type="text" class="form-control" style="font-size:2em" placeholder="What needs to bo done?">
+    </div>
+
+    <!-- lister -->
+    <ul class="list-group" style="font-size:2em">
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">完成方案第二版</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static"><s>到超市買蘋果</s></span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">到超商買哈蜜瓜</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">晚上六點吃早餐</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <label class="form-check-label text-black-50">
+                <input type="checkbox" class="rkm-hide-checkbox" onclick="alert('check up')">
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+            <span class="form-control-static">交報告給老闆</span>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" style="font-size:2em">&times;</span>
+            </button>
+        </li>
+    </ul>
+
+    <!-- status bar -->
+    <div class="mt-1 text-center">
+        <span class="px-2 py-1 float-left">3 items left</span>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-primary active">All</button>
+            <button type="button" class="btn btn-outline-primary">Active</button>
+            <button type="button" class="btn btn-outline-primary">Completed</button>
+        </div>
+        <button type="button" class="btn btn-outline-primary float-right">Clear completed</button>
+    </div>
+</div>
+
+<!-- 按讚 -->
+<div class="container mt-3">
+    <div class="text-center">
+        <button class="btn btn-light">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>&nbsp;讚
+            <span class="badge badge-pill badge-info">99</span>
+        </button>
+        <button class="btn btn-light">
+            <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>&nbsp;遜
+            <span class="badge badge-pill badge-info">88</span>
+        </button>
+    </div>
+</div>
+
