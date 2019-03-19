@@ -7,10 +7,11 @@
 <#
 var sysFuncIds = new [] {
 	new { name = "ReactLab", funcIds = new string[] {
-		"Hello","Demo"
+		//"Hello","Demo"
 	}},
 	new { name = "ReduxLab", funcIds = new string[] {
-		"Demo2","AccountApp","ReduxHello"
+		//"Demo2","AccountApp",\
+		"ReduxHello"
 	}}
 };
 #>

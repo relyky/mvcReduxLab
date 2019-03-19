@@ -3,10 +3,6 @@ module.exports = [
 {
     context: __dirname,
 	entry: {
-		reactlabhello:'./ReactLab/Hello/app.js',
-		reactlabdemo:'./ReactLab/Demo/app.js',
-		reduxlabdemo2:'./ReduxLab/Demo2/app.js',
-		reduxlabaccountapp:'./ReduxLab/AccountApp/app.js',
 		reduxlabreduxhello:'./ReduxLab/ReduxHello/app.js',
 	},
     output: {

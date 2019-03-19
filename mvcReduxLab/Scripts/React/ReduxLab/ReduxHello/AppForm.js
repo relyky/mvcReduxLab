@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import AppHelper from 'CommonFF/AppHelper.js'
 import TitleWidget from 'Common/TitleWidget.js'
 import Hello2 from './Hello2.js'
+import InputMirror from './InputMirror.js'
 
 class AppForm extends React.Component {
     constructor(props) {
@@ -16,6 +17,8 @@ class AppForm extends React.Component {
                 <TitleWidget appTitle={globalappinfo.appTitle} /> 
 
                 <Hello2 />
+                <hr/>
+                <InputMirror />
 
             </div>
         )

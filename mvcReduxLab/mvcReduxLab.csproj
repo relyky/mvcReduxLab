@@ -447,6 +447,7 @@
     <Content Include="Scripts\React\ReduxLab\Demo2\reducers\store.js" />
     <Content Include="Scripts\React\ReduxLab\ReduxHello\app.js" />
     <Content Include="Scripts\React\ReduxLab\ReduxHello\AppForm.js" />
+    <Content Include="Scripts\React\ReduxLab\ReduxHello\InputMIrror.js" />
     <Content Include="Scripts\React\ReduxLab\ReduxHello\Hello2.js" />
     <Content Include="Scripts\React\ReduxLab\ReduxHello\reducers\helloReducer.js" />
     <Content Include="Scripts\React\ReduxLab\ReduxHello\reducers\store.js" />
