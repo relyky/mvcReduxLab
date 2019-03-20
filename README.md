@@ -9,4 +9,5 @@ React: version 16
   
 ## § appendidx
 [Redux Tutorial - Learn React/Redux in one video](https://www.youtube.com/watch?v=OSSpVLpuVWA&t=50s)  
-[ReactJS + Redux Basics](https://www.youtube.com/playlist?list=PL55RiY5tL51rrC3sh8qLiYHqUV3twEYU_)
+[ReactJS + Redux Basics](https://www.youtube.com/playlist?list=PL55RiY5tL51rrC3sh8qLiYHqUV3twEYU_)  
+[Font Awesome v4.7](https://fontawesome.com/v4.7.0/icons/)
