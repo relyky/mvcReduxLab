@@ -27,5 +27,6 @@ namespace mvcReduxLab
     
         public virtual DbSet<Account> Account { get; set; }
         public virtual DbSet<Like> Like { get; set; }
+        public virtual DbSet<Activity> Activity { get; set; }
     }
 }
