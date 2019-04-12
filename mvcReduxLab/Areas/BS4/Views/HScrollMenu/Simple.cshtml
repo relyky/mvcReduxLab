@@ -1,0 +1,45 @@
+﻿@{
+    TempData["Title"] = "Simple responsive horizontal scrolling menu with CSS";
+}
+<h1 class="py-2 px-5 mb-0">@TempData["Title"]</h1>
+<p>
+    ref→https://iamsteve.me/blog/entry/horizontal-scrolling-responsive-menu<br />
+    ref→https://iamsteve.me/blog/entry/multiple-level-horizontal-scrolling-navigation
+</p>
+
+<style type="text/css">
+    /*
+[1]: All items a forced onto a single line, causing the overflow when necessary.
+[2]: Automatic overflow means a scroll bar won’t be present if it isn’t needed
+[3]: Make it smooth scrolling on iOS devices
+[4]: Hide the ugly scrollbars in Edge until the scrollable area is hovered
+[5]: Hide the scroll bar in WebKit browsers
+*/
+.scroll {
+    white-space: nowrap; /* [1] */
+    overflow-x: auto; /* [2] */
+    -webkit-overflow-scrolling: touch; /* [3] */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+}
+
+/* [5] */
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+</style>
+
+<header class="scroll">
+    <a href="http://iamsteve.me">Logo</a>
+    <nav>
+        <a href="http://iamsteve.me/blog">Blog</a>
+        <a href="http://iamsteve.me/portfolio">Portfolio</a>
+        <a href="http://iamsteve.me/downloads">Downloads</a>
+        <a href="http://iamsteve.me/about">About</a>
+        <a href="http://iamsteve.me/contact">Contact</a>
+        <a href="http://iamsteve.me/blog">Blog</a>
+        <a href="http://iamsteve.me/portfolio">Portfolio</a>
+        <a href="http://iamsteve.me/downloads">Downloads</a>
+        <a href="http://iamsteve.me/about">About</a>
+        <a href="http://iamsteve.me/contact">Contact</a>
+    </nav>
+</header>

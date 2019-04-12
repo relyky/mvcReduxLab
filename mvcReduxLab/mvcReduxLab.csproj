@@ -206,6 +206,7 @@
     <Compile Include="Areas\BS4\BS4AreaRegistration.cs" />
     <Compile Include="Areas\BS4\Controllers\ButtonsController.cs" />
     <Compile Include="Areas\BS4\Controllers\GridController.cs" />
+    <Compile Include="Areas\BS4\Controllers\HScrollMenuController.cs" />
     <Compile Include="Areas\BS4\Controllers\HTML5Controller.cs" />
     <Compile Include="Areas\BS4\Controllers\ModalController.cs" />
     <Compile Include="Areas\BS4\Controllers\NavsController.cs" />
@@ -386,6 +387,9 @@
     </Content>
     <Content Include="Areas\ReduxLab\Views\ReduxHello\Default.cshtml" />
     <Content Include="Areas\BS4\Views\TodoMVC\Default.cshtml" />
+    <Content Include="Areas\BS4\Views\HScrollMenu\Default.cshtml" />
+    <Content Include="Areas\BS4\Views\HScrollMenu\Simple.cshtml" />
+    <Content Include="Areas\BS4\Views\HScrollMenu\Demo.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />

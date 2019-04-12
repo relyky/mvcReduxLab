@@ -57,6 +57,15 @@ export function cuFmtNum(num) {
     return num;
 }
 
+/// helper function: 再包裝 str.substring(indexStart[, indexEnd])
+export function cuSubstring(str, indexStart, indexEnd) {
+    return cuIsEmpty(str) ? '' : str.substring(indexStart, indexEnd);
+}
+
+/// helper function: 再包裝 str.substr(start[, length])
+export function cuSubstr(str, start, length) {
+    return cuIsEmpty(str) ? '' : str.substr(start, length);
+}
 
 //-----------------------------------------------
 
@@ -69,6 +78,31 @@ export function cuYmd8ToYmd10(strDate) {
 export function cuYmd10ToYmd8(strDate) {
     return cuIsEmpty(strDate) ? '' : moment(strDate, 'YYYY/MM/DD').format('YYYYMMDD');
 }
+
+/// 12碼日期時間格式互轉 YYYYMMDDHHmm → YYYY/MM/DD HH:mm
+export function cuYmdHm12ToYmdHm16(strDatetime) {
+    return cuIsEmpty(strDatetime) ? '' : moment(strDatetime, 'YYYYMMDDHHmm').format('YYYY/MM/DD HH:mm');
+}
+
+/// 12碼日期時間格式互轉 YYYY/MM/DD HH:mm → YYYYMMDDHHmm
+export function cuYmdHm16ToYmdHm12(strDatetime) {
+    return cuIsEmpty(strDatetime) ? '' : moment(strDatetime, 'YYYY/MM/DD HH:mm').format('YYYYMMDDHHmm');
+}
+
+/// 今天 10碼
+export function cuToday() {
+    return moment().format('YYYY/MM/DD');
+}
+
+/// 現在 16碼
+export function cuNow() {
+    return moment().format('YYYY/MM/DD HH:mm');
+}
+
+///// 現在幾點幾分 5碼 --- 暫時保留不用
+//export function cuTime() {
+//    return moment().format('HH:mm');
+//}
 
 //--------------------------------------------------
 // 錯誤處理轉助函式 : BEGIN
@@ -166,9 +200,9 @@ export function cuCheckRequiredIdentity(loginUserInfo, requiredIdentityList) {
 
 /// 取得可選取業別清單
 export function cuGetRadioBtnList(identityList, requiredIdentityList) {
-    let item=[]
-     identityList.forEach((identity) => {
-         requiredIdentityList.forEach((reqId) => {
+    let item = []
+    identityList.forEach((identity) => {
+        requiredIdentityList.forEach((reqId) => {
 
             if (identity.identityCd === reqId) {
 
@@ -204,6 +238,17 @@ export function cuGetRadioBtnList(identityList, requiredIdentityList) {
         })
     })
     return item
+}
+
+/// 判斷targetReducer是否match
+export function matchTargetReducer(action, targetReducer) {
+    const match = action.targetReducer === undefined ||
+        action.targetReducer === null ||
+        action.targetReducer === targetReducer;
+
+    //console.log('matchTargetReducer', {action, targetReducer, match})
+
+    return match;
 }
 
 // 共用的商業邏輯判斷 ： END
