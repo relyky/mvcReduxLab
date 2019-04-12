@@ -3,7 +3,7 @@ module.exports = [
 {
     context: __dirname,
 	entry: {
-		reduxlabreduxhello:'./ReduxLab/ReduxHello/app.js',
+		reactlabhashrouter:'./ReactLab/HashRouter/app.js',
 	},
     output: {
         path: path.resolve(__dirname, '../bundle/'),
