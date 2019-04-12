@@ -6,11 +6,11 @@
 <#@ output extension=".js" #>
 <#
 var sysFuncIds = new [] {
-	new { name = "ReactLab", funcIds = new string[] {
-		"Hello","Demo"
+	new { name = "ReactLab", funcIds = new string[] {"HashRouter"
+		//"Hello","Demo","HashRouter"
 	}},
 	new { name = "ReduxLab", funcIds = new string[] {
-		"Demo2", "AccountApp", "ReduxHello"
+		//"Demo2", "AccountApp", "ReduxHello"
 	}}
 };
 #>
