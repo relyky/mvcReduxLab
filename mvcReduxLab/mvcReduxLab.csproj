@@ -212,6 +212,8 @@
     <Compile Include="Areas\BS4\Controllers\NavsController.cs" />
     <Compile Include="Areas\BS4\Controllers\TodoMVCController.cs" />
     <Compile Include="Areas\BS4\Controllers\TypographyController.cs" />
+    <Compile Include="Areas\MVCLab\Controllers\HelloController.cs" />
+    <Compile Include="Areas\MVCLab\MVCLabAreaRegistration.cs" />
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HashRouterController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
@@ -392,6 +394,9 @@
     <Content Include="Areas\BS4\Views\HScrollMenu\Simple.cshtml" />
     <Content Include="Areas\BS4\Views\HScrollMenu\Demo.cshtml" />
     <Content Include="Areas\ReactLab\Views\HashRouter\Default.cshtml" />
+    <Content Include="Areas\MVCLab\Views\web.config" />
+    <Content Include="Areas\MVCLab\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\MVCLab\Views\Hello\Index.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -585,6 +590,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\BS4\Models\" />
+    <Folder Include="Areas\MVCLab\Models\" />
     <Folder Include="Areas\ReactLab\Models\" />
     <Folder Include="Areas\ReduxLab\Models\" />
     <Folder Include="Scripts\bundle\" />
