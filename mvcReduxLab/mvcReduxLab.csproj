@@ -683,6 +683,7 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Report\rdlc\OverReport.rdlc" />
     <EmbeddedResource Include="Report\rdlc\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>

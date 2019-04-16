@@ -13,6 +13,14 @@ namespace mvcReduxLab.Report
         /// <summary>
         ///  透過 Session 交換報表資訊過來並產生報表。
         /// </summary>
+        /// <remarks>
+        /// 報表內資料來源的定義，全部統一在 ReportDataSet 處理。
+        /// 報表開發步驟：
+        /// 1) 在 ReportDataSet 定義該報表資料來源。
+        /// 2) 在目錄[/Report/rdle]加入報表並開發好。
+        /// 3) 應用 ReportViewer 預覽與列印。
+        /// 注意：這三段的交集都在 ReportDataSet 定義的資料來源。
+        /// </remarks>
         private void GenerateReport()
         {
             var ReportWrapperSessionKey = "ReportWrapper";

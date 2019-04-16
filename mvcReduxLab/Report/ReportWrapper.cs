@@ -22,6 +22,13 @@ namespace mvcReduxLab.Report
             ReportParameters = new List<ReportParameter>();
         }
 
+        public void Add(ReportDataSource rds) {
+            this.ReportDataSources.Add(rds);
+        }
+
+        public void Add(ReportParameter rp) {
+            this.ReportParameters.Add(rp);
+        }
 
         // Properties
         public string ReportPath { get; set; }
