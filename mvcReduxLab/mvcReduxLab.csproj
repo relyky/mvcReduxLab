@@ -288,6 +288,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportWrapper.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ViewModels\AccountInfoFormDataVM.cs" />
     <Compile Include="ViewModels\ErrorMessageVM.cs" />
@@ -385,6 +393,7 @@
       <LastGenOutput>MyDatabaseModel.cs</LastGenOutput>
     </Content>
     <Content Include="Report\Report1.aspx" />
+    <Content Include="Report\ReportViewer.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />

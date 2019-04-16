@@ -6,9 +6,11 @@
 
 <h2>StateArea</h2>
 
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("Print")" target="_blank">列印</a>
+    <a href="@Url.Action("Report")" target="_blank">列印(一般化)</a>
+</p>
 <table class="table">
     <tr>
         <th>
@@ -52,11 +54,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.remark)
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id = item.name }) |
             @Html.ActionLink("Details", "Details", new { id = item.name }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.name })
-        </td>
+        </td>*@
     </tr>
 }
 
