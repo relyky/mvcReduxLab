@@ -390,6 +390,8 @@
     <Content Include="App_Code\ViewFunctions.cshtml" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_square.png" />
+    <Content Include="images\scb_stamp.png" />
+    <Content Include="images\scb_test_logo.png" />
     <Content Include="images\standard_chartered_logo_svg.svg" />
     <Content Include="MyDatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -696,6 +698,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Report\rdlc\OverReport.rdlc" />
     <EmbeddedResource Include="Report\rdlc\Report1.rdlc" />
+    <EmbeddedResource Include="Report\rdlc\SampleTicket2.rdlc" />
     <EmbeddedResource Include="Report\rdlc\SampleTicket.rdlc" />
   </ItemGroup>
   <PropertyGroup>
