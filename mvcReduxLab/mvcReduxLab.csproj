@@ -384,6 +384,7 @@
     <Content Include="App_Code\ViewFunctions.cshtml" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_square.png" />
+    <Content Include="images\standard_chartered_logo_svg.svg" />
     <Content Include="MyDatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyDatabaseModel.edmx</DependentUpon>
@@ -689,6 +690,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Report\rdlc\OverReport.rdlc" />
     <EmbeddedResource Include="Report\rdlc\Report1.rdlc" />
+    <EmbeddedResource Include="Report\rdlc\SampleTicket.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -118,7 +118,7 @@
   <xs:element name="ReportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportDataSet" msprop:Generator_UserDSName="ReportDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Account" msprop:Generator_TableClassName="AccountDataTable" msprop:Generator_TableVarName="tableAccount" msprop:Generator_RowChangedName="AccountRowChanged" msprop:Generator_TablePropName="Account" msprop:Generator_RowDeletingName="AccountRowDeleting" msprop:Generator_RowChangingName="AccountRowChanging" msprop:Generator_RowEvHandlerName="AccountRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountRowDeleted" msprop:Generator_RowClassName="AccountRow" msprop:Generator_UserTableName="Account" msprop:Generator_RowEvArgName="AccountRowChangeEvent">
+        <xs:element name="Account" msprop:Generator_TableClassName="AccountDataTable" msprop:Generator_TableVarName="tableAccount" msprop:Generator_TablePropName="Account" msprop:Generator_RowDeletingName="AccountRowDeleting" msprop:Generator_RowChangingName="AccountRowChanging" msprop:Generator_RowEvHandlerName="AccountRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountRowDeleted" msprop:Generator_UserTableName="Account" msprop:Generator_RowChangedName="AccountRowChanged" msprop:Generator_RowEvArgName="AccountRowChangeEvent" msprop:Generator_RowClassName="AccountRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
@@ -166,7 +166,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Like" msprop:Generator_TableClassName="LikeDataTable" msprop:Generator_TableVarName="tableLike" msprop:Generator_RowChangedName="LikeRowChanged" msprop:Generator_TablePropName="Like" msprop:Generator_RowDeletingName="LikeRowDeleting" msprop:Generator_RowChangingName="LikeRowChanging" msprop:Generator_RowEvHandlerName="LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="LikeRowDeleted" msprop:Generator_RowClassName="LikeRow" msprop:Generator_UserTableName="Like" msprop:Generator_RowEvArgName="LikeRowChangeEvent">
+        <xs:element name="Like" msprop:Generator_TableClassName="LikeDataTable" msprop:Generator_TableVarName="tableLike" msprop:Generator_TablePropName="Like" msprop:Generator_RowDeletingName="LikeRowDeleting" msprop:Generator_RowChangingName="LikeRowChanging" msprop:Generator_RowEvHandlerName="LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="LikeRowDeleted" msprop:Generator_UserTableName="Like" msprop:Generator_RowChangedName="LikeRowChanged" msprop:Generator_RowEvArgName="LikeRowChangeEvent" msprop:Generator_RowClassName="LikeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idName" msprop:Generator_ColumnVarNameInTable="columnidName" msprop:Generator_ColumnPropNameInRow="idName" msprop:Generator_ColumnPropNameInTable="idNameColumn" msprop:Generator_UserColumnName="idName">
@@ -181,7 +181,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Images" msprop:Generator_TableClassName="ImagesDataTable" msprop:Generator_TableVarName="tableImages" msprop:Generator_TablePropName="Images" msprop:Generator_RowDeletingName="ImagesRowDeleting" msprop:Generator_RowChangingName="ImagesRowChanging" msprop:Generator_RowEvHandlerName="ImagesRowChangeEventHandler" msprop:Generator_RowDeletedName="ImagesRowDeleted" msprop:Generator_UserTableName="Images" msprop:Generator_RowChangedName="ImagesRowChanged" msprop:Generator_RowEvArgName="ImagesRowChangeEvent" msprop:Generator_RowClassName="ImagesRow">
+        <xs:element name="Images" msprop:Generator_TableClassName="ImagesDataTable" msprop:Generator_TableVarName="tableImages" msprop:Generator_RowChangedName="ImagesRowChanged" msprop:Generator_TablePropName="Images" msprop:Generator_RowDeletingName="ImagesRowDeleting" msprop:Generator_RowChangingName="ImagesRowChanging" msprop:Generator_RowEvHandlerName="ImagesRowChangeEventHandler" msprop:Generator_RowDeletedName="ImagesRowDeleted" msprop:Generator_RowClassName="ImagesRow" msprop:Generator_UserTableName="Images" msprop:Generator_RowEvArgName="ImagesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="imgName" msprop:Generator_ColumnVarNameInTable="columnimgName" msprop:Generator_ColumnPropNameInRow="imgName" msprop:Generator_ColumnPropNameInTable="imgNameColumn" msprop:Generator_UserColumnName="imgName" type="xs:string" minOccurs="0" />

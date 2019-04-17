@@ -84,13 +84,33 @@ namespace mvcReduxLab.Areas.MVCLab.Controllers
             rw.Add(new ReportParameter("integer1", "12345678"));
             rw.Add(new ReportParameter("float1", "98765.4321"));
 
+            //# Pass report info via session & Go report viewer page
+            Session["ReportWrapper"] = rw;
+            return Redirect("~/Report/ReportViewer.aspx");
+        }
 
-
+        /// <summary>
+        /// 列印傳票(試作)
+        /// </summary>
+        public ActionResult PrintSampleTicket()
+        {
+            //# Set report info
+            ReportWrapper rw = new ReportWrapper();
+            rw.ReportPath = Server.MapPath("~/Report/rdlc/SampleTicket.rdlc");
+            rw.Add(new ReportParameter("param1", "103 / 11 / 08 15 : 30"));
+            rw.Add(new ReportParameter("param2", "103110813572240001"));
+            rw.Add(new ReportParameter("param3", "台幣帳戶存款"));
+            rw.Add(new ReportParameter("param4", "USD 1,000"));
+            rw.Add(new ReportParameter("param5", "29.594"));
+            rw.Add(new ReportParameter("param6", "TWD 29,594"));
+            rw.Add(new ReportParameter("param7", "0312XXXXXXX219 - TWD"));
+            rw.Add(new ReportParameter("param8", "王某某"));
+            rw.Add(new ReportParameter("param9", "1357224 - 7654321 - 陳某某"));
+            rw.Add(new ReportParameter("param10", ""));
 
             //# Pass report info via session & Go report viewer page
             Session["ReportWrapper"] = rw;
             return Redirect("~/Report/ReportViewer.aspx");
         }
-        
     }
 }
