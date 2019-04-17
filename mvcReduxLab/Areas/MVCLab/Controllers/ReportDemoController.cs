@@ -1,7 +1,10 @@
 ﻿using Microsoft.Reporting.WebForms;
 using mvcReduxLab.Report;
+using QRCoder;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -96,13 +99,28 @@ namespace mvcReduxLab.Areas.MVCLab.Controllers
         {
             //# 準備資料來源
 
+            // 產生QR Code
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode("The text which should be encoded.", QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeImage = qrCode.GetGraphic(20);
+
+            // to trace: qrCodeImage.RawFormat
+
+            byte[] imgBlog2 = null;
+            using (var ms = new MemoryStream())
+            {
+                qrCodeImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                imgBlog2 = ms.ToArray();
+            }
+
             // 讀取圖檔
             byte[] imgBlob = System.IO.File.ReadAllBytes(Server.MapPath("~/images/logo.png"));
 
             // 準備 Images 資料來源
             ReportDataSet.ImagesDataTable imgTable = new ReportDataSet.ImagesDataTable();
             var nr = imgTable.NewImagesRow();
-            imgTable.AddImagesRow(1, imgBlob, null, null);
+            imgTable.AddImagesRow(1, imgBlob, imgBlog2, null);
             imgTable.AcceptChanges();
             
             //------------------------------

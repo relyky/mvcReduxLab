@@ -541,10 +541,27 @@
             <MIMEType>image/x-png</MIMEType>
             <Top>3.20573cm</Top>
             <Left>15.28974cm</Left>
-            <Height>5.49479cm</Height>
+            <Height>3.53687cm</Height>
             <Width>5.68854cm</Width>
             <ZIndex>15</ZIndex>
             <ToolTip>Image1</ToolTip>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Image Name="Image2">
+            <Source>Database</Source>
+            <Value>=Fields!image2.Value</Value>
+            <MIMEType>image/x-png</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>7.40516cm</Top>
+            <Left>15.28974cm</Left>
+            <Height>4.09292cm</Height>
+            <Width>5.68854cm</Width>
+            <ZIndex>16</ZIndex>
+            <ToolTip>Image2</ToolTip>
             <Style>
               <Border>
                 <Style>None</Style>
