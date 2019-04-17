@@ -55,39 +55,35 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>現金存款-</Value>
+                    <Value>現金存款</Value>
                     <Style>
                       <FontFamily>細明體</FontFamily>
                       <FontSize>18pt</FontSize>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>台幣現金換匯後存入外幣帳戶</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>細明體</FontFamily>
-                      <FontSize>18pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value>(</Value>
                     <Style>
                       <FontFamily>細明體</FontFamily>
-                      <FontSize>18pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>稿)</Value>
+                    <Value>外幣現金換匯後存入台幣帳戶</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>細明體</FontFamily>
-                      <FontSize>18pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <TextDecoration>None</TextDecoration>
                       <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>)</Value>
+                    <Style>
+                      <FontFamily>細明體</FontFamily>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -96,9 +92,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.36724cm</Top>
-            <Left>0.49953cm</Left>
+            <Left>0.18203cm</Left>
             <Height>0.89104cm</Height>
-            <Width>14.39302cm</Width>
+            <Width>9.6981cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -114,9 +110,9 @@
             <Value>scb_test_logo</Value>
             <Sizing>FitProportional</Sizing>
             <Top>0.36724cm</Top>
-            <Left>16.08349cm</Left>
-            <Height>1.87854cm</Height>
-            <Width>4.89479cm</Width>
+            <Left>12.7762cm</Left>
+            <Height>1.5875cm</Height>
+            <Width>4.1275cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -143,10 +139,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.19287cm</Top>
-            <Left>0.89641cm</Left>
+            <Top>1.64578cm</Top>
+            <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.89352cm</Width>
+            <Width>6.3379cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -177,8 +173,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.19287cm</Top>
-            <Left>7.93104cm</Left>
+            <Top>1.64578cm</Top>
+            <Left>6.69631cm</Left>
             <Height>0.6cm</Height>
             <Width>6.96151cm</Width>
             <ZIndex>3</ZIndex>
@@ -211,10 +207,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.20573cm</Top>
-            <Left>0.89641cm</Left>
+            <Top>2.65864cm</Top>
+            <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.89352cm</Width>
+            <Width>6.3379cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -233,7 +229,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>台幣現金：</Value>
+                    <Value>外幣現金：</Value>
                     <Style />
                   </TextRun>
                   <TextRun>
@@ -245,10 +241,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>5.05781cm</Top>
-            <Left>0.89641cm</Left>
+            <Top>4.51072cm</Top>
+            <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.89352cm</Width>
+            <Width>6.3379cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -279,10 +275,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>6.1426cm</Top>
-            <Left>0.89641cm</Left>
+            <Top>5.59551cm</Top>
+            <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.89352cm</Width>
+            <Width>6.3379cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -301,7 +297,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>入帳金額：</Value>
+                    <Value>存入金額：</Value>
                     <Style />
                   </TextRun>
                   <TextRun>
@@ -313,10 +309,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>7.14802cm</Top>
-            <Left>0.89641cm</Left>
+            <Top>6.60093cm</Top>
+            <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.89352cm</Width>
+            <Width>6.3379cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -347,10 +343,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.10052cm</Top>
-            <Left>0.89641cm</Left>
+            <Top>7.55343cm</Top>
+            <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.89352cm</Width>
+            <Width>6.3379cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -381,8 +377,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.10052cm</Top>
-            <Left>7.93104cm</Left>
+            <Top>7.55343cm</Top>
+            <Left>6.69631cm</Left>
             <Height>0.6cm</Height>
             <Width>6.96151cm</Width>
             <ZIndex>9</ZIndex>
@@ -415,10 +411,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>12.73927cm</Top>
-            <Left>12.00891cm</Left>
+            <Top>11.73385cm</Top>
+            <Left>7.21553cm</Left>
             <Height>0.6cm</Height>
-            <Width>5.70146cm</Width>
+            <Width>6.44229cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -449,10 +445,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>14.00927cm</Top>
-            <Left>12.00891cm</Left>
+            <Top>13.00385cm</Top>
+            <Left>7.21553cm</Left>
             <Height>0.6cm</Height>
-            <Width>5.70146cm</Width>
+            <Width>6.44229cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -465,10 +461,10 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>13.33927cm</Top>
-            <Left>12.85886cm</Left>
+            <Top>12.33385cm</Top>
+            <Left>8.06548cm</Left>
             <Height>0cm</Height>
-            <Width>4.85151cm</Width>
+            <Width>5.59234cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -477,10 +473,10 @@
             </Style>
           </Line>
           <Line Name="Line2">
-            <Top>14.60927cm</Top>
-            <Left>12.85886cm</Left>
+            <Top>13.60385cm</Top>
+            <Left>8.06548cm</Left>
             <Height>0cm</Height>
-            <Width>4.85151cm</Width>
+            <Width>5.59234cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -507,10 +503,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox13</rd:DefaultName>
-                <Top>3.81745cm</Top>
-                <Left>0.47625cm</Left>
+                <Top>3.12953cm</Top>
+                <Left>0.39688cm</Left>
                 <Height>0.6cm</Height>
-                <Width>7.84458cm</Width>
+                <Width>5.67643cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -523,10 +519,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>10.19183cm</Top>
-            <Left>0.89641cm</Left>
-            <Height>4.51583cm</Height>
-            <Width>8.89cm</Width>
+            <Top>9.87432cm</Top>
+            <Left>0.10266cm</Left>
+            <Height>3.72953cm</Height>
+            <Width>6.41726cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -538,11 +534,12 @@
           <Image Name="Image1">
             <Source>Database</Source>
             <Value>=Fields!image1.Value</Value>
-            <MIMEType>image/x-png</MIMEType>
-            <Top>3.20573cm</Top>
-            <Left>15.28974cm</Left>
-            <Height>3.53687cm</Height>
-            <Width>5.68854cm</Width>
+            <MIMEType>image/bmp</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>2.42217cm</Top>
+            <Left>12.7762cm</Left>
+            <Height>3.9952cm</Height>
+            <Width>4.1275cm</Width>
             <ZIndex>15</ZIndex>
             <ToolTip>Image1</ToolTip>
             <Style>
@@ -551,28 +548,11 @@
               </Border>
             </Style>
           </Image>
-          <Image Name="Image2">
-            <Source>Database</Source>
-            <Value>=Fields!image2.Value</Value>
-            <MIMEType>image/x-png</MIMEType>
-            <Sizing>FitProportional</Sizing>
-            <Top>7.40516cm</Top>
-            <Left>15.28974cm</Left>
-            <Height>4.09292cm</Height>
-            <Width>5.68854cm</Width>
-            <ZIndex>16</ZIndex>
-            <ToolTip>Image2</ToolTip>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
         </ReportItems>
-        <Height>6.22917in</Height>
+        <Height>5.4375in</Height>
         <Style />
       </Body>
-      <Width>8.48958in</Width>
+      <Width>6.6875in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

@@ -100,27 +100,26 @@ namespace mvcReduxLab.Areas.MVCLab.Controllers
             //# 準備資料來源
 
             // 產生QR Code
+            string text = "http://www.asiavista.com.tw/aaaaa/bbbbb?ccccc=ddddd&eeeee=fffff&ggggg=hhhhhiiiiijjjjjkkkkklllllmmmmm";
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode("The text which should be encoded.", QRCodeGenerator.ECCLevel.Q);
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeImage = qrCode.GetGraphic(20);
+            Bitmap qrCodeImage = qrCode.GetGraphic(3);
 
-            // to trace: qrCodeImage.RawFormat
-
-            byte[] imgBlog2 = null;
+            byte[] imgBlob = null;
             using (var ms = new MemoryStream())
             {
                 qrCodeImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                imgBlog2 = ms.ToArray();
+                imgBlob = ms.ToArray();
             }
 
             // 讀取圖檔
-            byte[] imgBlob = System.IO.File.ReadAllBytes(Server.MapPath("~/images/logo.png"));
+            //byte[] imgBlob = System.IO.File.ReadAllBytes(Server.MapPath("~/images/logo.png"));
 
             // 準備 Images 資料來源
             ReportDataSet.ImagesDataTable imgTable = new ReportDataSet.ImagesDataTable();
             var nr = imgTable.NewImagesRow();
-            imgTable.AddImagesRow(1, imgBlob, imgBlog2, null);
+            imgTable.AddImagesRow(1, imgBlob, null, null);
             imgTable.AcceptChanges();
             
             //------------------------------
