@@ -974,9 +974,13 @@ namespace mvcReduxLab.Report {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ImagesDataTable : global::System.Data.TypedTableBase<ImagesRow> {
             
-            private global::System.Data.DataColumn columnimgName;
+            private global::System.Data.DataColumn columnsn;
             
-            private global::System.Data.DataColumn columnimgBlob;
+            private global::System.Data.DataColumn columnimage1;
+            
+            private global::System.Data.DataColumn columnimage2;
+            
+            private global::System.Data.DataColumn columnimage3;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1013,17 +1017,33 @@ namespace mvcReduxLab.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn imgNameColumn {
+            public global::System.Data.DataColumn snColumn {
                 get {
-                    return this.columnimgName;
+                    return this.columnsn;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn imgBlobColumn {
+            public global::System.Data.DataColumn image1Column {
                 get {
-                    return this.columnimgBlob;
+                    return this.columnimage1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn image2Column {
+                get {
+                    return this.columnimage2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn image3Column {
+                get {
+                    return this.columnimage3;
                 }
             }
             
@@ -1064,14 +1084,23 @@ namespace mvcReduxLab.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagesRow AddImagesRow(string imgName, string imgBlob) {
+            public ImagesRow AddImagesRow(int sn, byte[] image1, byte[] image2, byte[] image3) {
                 ImagesRow rowImagesRow = ((ImagesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        imgName,
-                        imgBlob};
+                        sn,
+                        image1,
+                        image2,
+                        image3};
                 rowImagesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowImagesRow);
                 return rowImagesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ImagesRow FindBysn(int sn) {
+                return ((ImagesRow)(this.Rows.Find(new object[] {
+                            sn})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1091,17 +1120,28 @@ namespace mvcReduxLab.Report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnimgName = base.Columns["imgName"];
-                this.columnimgBlob = base.Columns["imgBlob"];
+                this.columnsn = base.Columns["sn"];
+                this.columnimage1 = base.Columns["image1"];
+                this.columnimage2 = base.Columns["image2"];
+                this.columnimage3 = base.Columns["image3"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnimgName = new global::System.Data.DataColumn("imgName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimgName);
-                this.columnimgBlob = new global::System.Data.DataColumn("imgBlob", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimgBlob);
+                this.columnsn = new global::System.Data.DataColumn("sn", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsn);
+                this.columnimage1 = new global::System.Data.DataColumn("image1", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimage1);
+                this.columnimage2 = new global::System.Data.DataColumn("image2", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimage2);
+                this.columnimage3 = new global::System.Data.DataColumn("image3", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimage3);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnsn}, true));
+                this.columnsn.AllowDBNull = false;
+                this.columnsn.Unique = true;
+                this.columnsn.DefaultValue = ((int)(1));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1424,58 +1464,97 @@ namespace mvcReduxLab.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string imgName {
+            public int sn {
+                get {
+                    return ((int)(this[this.tableImages.snColumn]));
+                }
+                set {
+                    this[this.tableImages.snColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public byte[] image1 {
                 get {
                     try {
-                        return ((string)(this[this.tableImages.imgNameColumn]));
+                        return ((byte[])(this[this.tableImages.image1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Images\' 中資料行 \'imgName\' 的值是 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("資料表 \'Images\' 中資料行 \'image1\' 的值是 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableImages.imgNameColumn] = value;
+                    this[this.tableImages.image1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string imgBlob {
+            public byte[] image2 {
                 get {
                     try {
-                        return ((string)(this[this.tableImages.imgBlobColumn]));
+                        return ((byte[])(this[this.tableImages.image2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Images\' 中資料行 \'imgBlob\' 的值是 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("資料表 \'Images\' 中資料行 \'image2\' 的值是 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableImages.imgBlobColumn] = value;
+                    this[this.tableImages.image2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsimgNameNull() {
-                return this.IsNull(this.tableImages.imgNameColumn);
+            public byte[] image3 {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableImages.image3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'Images\' 中資料行 \'image3\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableImages.image3Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetimgNameNull() {
-                this[this.tableImages.imgNameColumn] = global::System.Convert.DBNull;
+            public bool Isimage1Null() {
+                return this.IsNull(this.tableImages.image1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsimgBlobNull() {
-                return this.IsNull(this.tableImages.imgBlobColumn);
+            public void Setimage1Null() {
+                this[this.tableImages.image1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetimgBlobNull() {
-                this[this.tableImages.imgBlobColumn] = global::System.Convert.DBNull;
+            public bool Isimage2Null() {
+                return this.IsNull(this.tableImages.image2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setimage2Null() {
+                this[this.tableImages.image2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isimage3Null() {
+                return this.IsNull(this.tableImages.image3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setimage3Null() {
+                this[this.tableImages.image3Column] = global::System.Convert.DBNull;
             }
         }
         

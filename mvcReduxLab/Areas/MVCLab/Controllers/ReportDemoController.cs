@@ -94,6 +94,18 @@ namespace mvcReduxLab.Areas.MVCLab.Controllers
         /// </summary>
         public ActionResult PrintSampleTicket()
         {
+            //# 準備資料來源
+
+            // 讀取圖檔
+            byte[] imgBlob = System.IO.File.ReadAllBytes(Server.MapPath("~/images/logo.png"));
+
+            // 準備 Images 資料來源
+            ReportDataSet.ImagesDataTable imgTable = new ReportDataSet.ImagesDataTable();
+            var nr = imgTable.NewImagesRow();
+            imgTable.AddImagesRow(1, imgBlob, null, null);
+            imgTable.AcceptChanges();
+            
+            //------------------------------
             //# Set report info
             ReportWrapper rw = new ReportWrapper();
             rw.ReportPath = Server.MapPath("~/Report/rdlc/SampleTicket.rdlc");
@@ -107,6 +119,10 @@ namespace mvcReduxLab.Areas.MVCLab.Controllers
             rw.Add(new ReportParameter("param8", "王某某"));
             rw.Add(new ReportParameter("param9", "1357224 - 7654321 - 陳某某"));
             rw.Add(new ReportParameter("param10", ""));
+
+            //# 加入資料來源
+            // 加入圖片
+            rw.Add(new ReportDataSource("Images", (DataTable)imgTable));
 
             //# Pass report info via session & Go report viewer page
             Session["ReportWrapper"] = rw;
