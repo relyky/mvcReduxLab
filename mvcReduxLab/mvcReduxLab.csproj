@@ -18,7 +18,7 @@
     <AssemblyName>mvcReduxLab</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -242,6 +242,7 @@
     <Compile Include="Areas\ReactLab\Controllers\DemoController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HashRouterController.cs" />
     <Compile Include="Areas\ReactLab\Controllers\HelloController.cs" />
+    <Compile Include="Areas\ReactLab\Controllers\QRCodeController.cs" />
     <Compile Include="Areas\ReactLab\ReactLabAreaRegistration.cs" />
     <Compile Include="Areas\ReduxLab\Controllers\AccountAppController.cs" />
     <Compile Include="Areas\ReduxLab\Controllers\Demo2Controller.cs" />
@@ -382,6 +383,7 @@
     </Content>
     <Content Include="App_Code\ViewFunctions.cshtml" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo_square.png" />
     <Content Include="MyDatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyDatabaseModel.edmx</DependentUpon>
@@ -447,6 +449,7 @@
     <Content Include="Areas\MVCLab\Views\Hello\Index.cshtml" />
     <Content Include="Areas\MVCLab\Views\ReportDemo\Index.cshtml" />
     <Content Include="Areas\MVCLab\Views\ReportDemo\StateArea.cshtml" />
+    <Content Include="Areas\ReactLab\Views\QRCode\Default.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -557,6 +560,7 @@
     <Content Include="Scripts\React\ReactLab\HashRouter\WeeklySchedule\widgets\DataInfoView1.js" />
     <Content Include="Scripts\React\ReactLab\HashRouter\WeeklySchedule\widgets\DataInfoView2.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
+    <Content Include="Scripts\React\ReactLab\QRCode\app.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\apiClient.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\FormViewAccount.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\app.js" />
@@ -704,16 +708,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>17889</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8080/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
       <UserProperties Scripts_4React_4package_1json__JSONSchema="http://json.schemastore.org/prettierrc" />

@@ -3,7 +3,7 @@ module.exports = [
 {
     context: __dirname,
 	entry: {
-		reactlabhashrouter:'./ReactLab/HashRouter/app.js',
+		reactlabqrcode:'./ReactLab/QRCode/app.js',
 	},
     output: {
         path: path.resolve(__dirname, '../bundle/'),
