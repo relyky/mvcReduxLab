@@ -570,6 +570,7 @@
     <Content Include="Scripts\React\ReactLab\HashRouter\WeeklySchedule\widgets\DataInfoView2.js" />
     <Content Include="Scripts\React\ReactLab\Hello\app.js" />
     <Content Include="Scripts\React\ReactLab\QRCode\app.js" />
+    <Content Include="Scripts\React\ReactLab\QRCode\flowText.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\apiClient.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\FormViewAccount.js" />
     <Content Include="Scripts\React\ReduxLab\AccountApp\app.js" />
@@ -662,6 +663,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Scripts\React\.flowconfig" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
