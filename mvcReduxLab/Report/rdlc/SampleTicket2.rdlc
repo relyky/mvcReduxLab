@@ -380,7 +380,7 @@
             <Top>7.55343cm</Top>
             <Left>6.69632cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.96151cm</Width>
+            <Width>5.71759cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -411,7 +411,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>12.03205cm</Top>
+            <Top>9.49205cm</Top>
             <Left>0.18203cm</Left>
             <Height>0.6cm</Height>
             <Width>6.44229cm</Width>
@@ -427,7 +427,7 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>12.63205cm</Top>
+            <Top>10.12733cm</Top>
             <Left>1.03198cm</Left>
             <Height>0cm</Height>
             <Width>5.59234cm</Width>
@@ -443,8 +443,8 @@
             <Value>=Fields!image1.Value</Value>
             <MIMEType>image/bmp</MIMEType>
             <Sizing>FitProportional</Sizing>
-            <Top>8.32982cm</Top>
-            <Left>12.06386cm</Left>
+            <Top>5.78982cm</Top>
+            <Left>12.51974cm</Left>
             <Height>4.30223cm</Height>
             <Width>4.38396cm</Width>
             <ZIndex>12</ZIndex>
@@ -456,7 +456,7 @@
             </Style>
           </Image>
         </ReportItems>
-        <Height>5.15625in</Height>
+        <Height>4.11458in</Height>
         <Style />
       </Body>
       <Width>6.6875in</Width>
