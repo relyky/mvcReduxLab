@@ -283,10 +283,6 @@
     <Compile Include="Activity.cs">
       <DependentUpon>MyDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Content Include="Models\DerivedMyFile.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DerivedMyFile.txt</LastGenOutput>
-    </Content>
     <Compile Include="App_Code\Base2Controller.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -322,11 +318,6 @@
     </Compile>
     <Compile Include="Like.cs">
       <DependentUpon>MyDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BaseTemplate.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BaseTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="MyDatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -447,10 +438,6 @@
     <Content Include="Content\sweetalert2\src\utils\setParameters.js" />
     <Content Include="Content\sweetalert2\src\utils\Timer.js" />
     <Content Include="Content\sweetalert2\src\utils\utils.js" />
-    <Content Include="Models\BaseTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BaseTemplate.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -459,19 +446,11 @@
     </Content>
     <Content Include="App_Code\ViewFunctions.cshtml" />
     <Content Include="images\logo.png" />
-<<<<<<< HEAD
     <Content Include="images\logo_square.png" />
     <Content Include="images\scb_stamp.png" />
     <Content Include="images\scb_test_logo.png" />
+    <Content Include="images\scb_test_watermark.png" />
     <Content Include="images\standard_chartered_logo_svg.svg" />
-=======
-    <Content Include="Models\DerivedMyFile.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DerivedMyFile.tt</DependentUpon>
-    </Content>
-    <Content Include="Models\MyFile.txt" />
->>>>>>> c20be4ffa91f156b1c8f319cbbc1d1e6d82076c4
     <Content Include="MyDatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyDatabaseModel.edmx</DependentUpon>
@@ -761,6 +740,7 @@
     <Folder Include="Areas\MVCLab\Models\" />
     <Folder Include="Areas\ReactLab\Models\" />
     <Folder Include="Areas\ReduxLab\Models\" />
+    <Folder Include="Models\" />
     <Folder Include="Scripts\bundle\" />
   </ItemGroup>
   <ItemGroup>
@@ -777,15 +757,10 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <EmbeddedResource Include="Report\rdlc\OverReport.rdlc" />
     <EmbeddedResource Include="Report\rdlc\Report1.rdlc" />
     <EmbeddedResource Include="Report\rdlc\SampleTicket2.rdlc" />
     <EmbeddedResource Include="Report\rdlc\SampleTicket.rdlc" />
-=======
-    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
-    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
->>>>>>> c20be4ffa91f156b1c8f319cbbc1d1e6d82076c4
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
