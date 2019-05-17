@@ -6,8 +6,9 @@
 <#@ output extension=".js" #>
 <#
 var sysFuncIds = new [] {
-	new { name = "ReactLab", funcIds = new string[] { "QRCode"
-		//"Hello","Demo","HashRouter","QRCode"
+	new { name = "ReactLab", funcIds = new string[] {
+		//"Hello","Demo","HashRouter","QRCode",
+		"ScanQrCode"
 	}},
 	new { name = "ReduxLab", funcIds = new string[] {
 		//"Demo2", "AccountApp", "ReduxHello"
@@ -76,6 +77,9 @@ foreach(var functionId in subSys.funcIds)
             CommonFF: path.resolve(__dirname, 'CommonFF/'),
 			CommonMA: path.resolve(__dirname, 'CommonMA/')
         }
+    },
+    node: {
+        fs: 'empty' // 解決「Can't resolve 'fs' when bundle with webpack」問題。(囧)
     }
 }, 
 ]

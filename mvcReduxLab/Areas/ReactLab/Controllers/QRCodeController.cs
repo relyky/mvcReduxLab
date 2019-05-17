@@ -13,5 +13,10 @@ namespace mvcReduxLab.Areas.ReactLab.Controllers
         {
             return View();
         }
+
+        public ActionResult ScanQrCode()
+        {
+            return View();
+        }
     }
 }

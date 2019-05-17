@@ -3,7 +3,7 @@ module.exports = [
 {
     context: __dirname,
 	entry: {
-		reactlabqrcode:'./ReactLab/QRCode/app.js',
+		reactlabscanqrcode:'./ReactLab/ScanQrCode/app.js',
 	},
     output: {
         path: path.resolve(__dirname, '../bundle/'),
@@ -46,6 +46,9 @@ module.exports = [
             CommonFF: path.resolve(__dirname, 'CommonFF/'),
 			CommonMA: path.resolve(__dirname, 'CommonMA/')
         }
+    },
+    node: {
+        fs: 'empty' // 解決「Can't resolve 'fs' when bundle with webpack」問題。(囧)
     }
 }, 
 ]
