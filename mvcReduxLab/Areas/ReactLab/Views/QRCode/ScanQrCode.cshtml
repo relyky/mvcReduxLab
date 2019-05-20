@@ -1,21 +1,6 @@
-﻿@*@{
-        TempData["FunctionId"] = @"ReactLabScanQrCode"; // <-- 請變更
-        TempData["Title"] = @"Scan QR-Code"; // <-- 請變更
-        TempData["Breadcrumb"] = @"";
-        TempData["EntryFormNo"] = Convert.ToString(ViewContext.RouteData.Values["id"]).ToUpper();
-        TempData["EntryMode"] = Convert.ToString(ViewContext.RouteData.Values["mode"] ?? "INIT").ToUpper();
-        TempData["AntiForgeryToken"] = ViewFunctions.GetAntiForgeryToken();
-    }
-
-    <div id="app"></div>
-
-    @section scripts{
-        @Html.Partial("~/Views/Shared/_ReactAppInit.cshtml")
-    }*@
-
-@{
+﻿@{
     Layout = null;
-    TempData["Title"] = "Scan QR Code";
+    TempData["Title"] = "Scan QR Code with Instascan";
 }
 
 <!DOCTYPE html>
@@ -30,9 +15,12 @@
 
 <body>
     <h1>@TempData["Title"]</h1>
-    <p style="color:red">需在HTTPS下才有效用。(囧囧囧)</p>
+    <h2 style="color:red">需在HTTPS下才有效用。<br />經測試只有Andriod手機才有效用，iOS無效用。(囧)</h2>
+    <!-- 官網文件 https://github.com/schmich/instascan -->
+    <!-- 官網demo https://schmich.github.io/instascan/-->
 
     <p id="alert" style="color:red"></p>
+    <p id="logmsg" style="color:blue">log</p>
 
     <video id="preview"></video>
     <!-- 詢問是否允許開啟相機後，會顯示在這個元素裡 -->
@@ -42,25 +30,23 @@
         let scanner = new Instascan.Scanner({
             video: document.getElementById('preview')
         });
-        // 開啟一個新的掃描
-        // 宣告變數scanner，在html<video>標籤id為preview的地方開啟相機預覽。
-        // Notice:這邊注意一定要用<video>的標籤才能使用，詳情請看他的github API的部分解釋。
 
+        //設定偵聽掃描事件，若有偵聽到印出內容。
         scanner.addListener('scan', function (content) {
             console.log(content);
+            $('#logmsg').html($('#logmsg').html() + '<br/>' + content);
             alert(content);
         });
 
-        //開始偵聽掃描事件，若有偵聽到印出內容。
-
         Instascan.Camera.getCameras().then(function (cameras) {
+
+            $('#logmsg').html($('#logmsg').html() + '<br/>' + 'cameras.length:' + cameras.length);
+
             //取得設備的相機數目
             if (cameras.length > 0) {
                 ///若設備相機數目大於0 則先開啟第0個相機(程式的世界是從第零個開始的)
-                scanner.start(cameras[0]);
+                scanner.start(cameras[1]);
             } else {
-                //若設備沒有相機數量則顯示"No cameras found";
-                //這裡自行判斷要寫什麼
                 $('#alert').text('No cameras found.');
                 console.error('No cameras found.');
             }
