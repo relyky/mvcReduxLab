@@ -7,8 +7,8 @@
 <#
 var sysFuncIds = new [] {
 	new { name = "ReactLab", funcIds = new string[] {
-		//"Hello","Demo","HashRouter","QRCode",
-		"ScanQrCode"
+		"Hello","Demo","HashRouter","QRCode",
+		//"ScanQrCode"
 	}},
 	new { name = "ReduxLab", funcIds = new string[] {
 		//"Demo2", "AccountApp", "ReduxHello"
