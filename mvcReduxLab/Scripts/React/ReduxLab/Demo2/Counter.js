@@ -45,15 +45,16 @@ class Counter extends Component {
     }
 
     handleAdd(e) {
-        console.log('handleAdd')
-        const { countInfo } = this.props
+        const { countInfo, dispatch } = this.props
+        console.log('handleAdd', { countInfo, dispatch })
 
         const properties = { count: countInfo.count + Number(countInfo.num) }
 
         //# dispatch(action) 二種方法
-        //this.props.dispatch(actions.assignStateProps(properties, targetReducer))
-        this.props.dispatch({ type: Ks.ASSIGN_STATE_PROPS, properties, targetReducer })
+        //dispatch(actions.assignProps(properties, targetReducer))
+        dispatch({ type: Ks.ASSIGN_PROPS, properties, targetReducer })
     }
+
 }
 
 // connect to Store

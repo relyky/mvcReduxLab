@@ -15,6 +15,7 @@ export default function helloReducer(state = initialState, action) {
     switch (action.type) {
         case Ks.ASSIGN_VALUE:
             return { ...state, [action.name]: action.value }
+        case Ks.ASSIGN_PROPS:
         case Ks.ASSIGN_STATE_PROPS:
             return { ...state, ...(action.properties) }
         default:

@@ -19,6 +19,7 @@ export default function counterReducer(state = initialState, action)
             return { ...state, [action.name]: action.value }
             //return Object.assign({}, state, { [action.name]: action.value });
         case Ks.ASSIGN_STATE_PROPS:
+        case Ks.ASSIGN_PROPS:
             return { ...state, ...(action.properties) }
         case 'INCREASE_COUNT':
             return { ...state, count: state.count + 1 }

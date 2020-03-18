@@ -7,6 +7,7 @@
   "scripts": {
     "start": "webpack --mode development",
     "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow"

@@ -3,7 +3,8 @@
 // 常數字串。用以避免打錯字的冏狀。
 export const Ks = {
     ASSIGN_VALUE: 'ASSIGN_VALUE',     // 更新1個property
-    ASSIGN_STATE_PROPS: 'ASSIGN_STATE_PROPS', // 更新多個property
+    ASSIGN_PROPS: 'ASSIGN_STATE_PROPS', // 更新多個property，更名
+    ASSIGN_STATE_PROPS: 'ASSIGN_STATE_PROPS', // 保留以向前相容
     SET_BLOCKING: 'SET_BLOCKING',     // 畫面鎖定
     SETUP_APP_INFO: 'SETUP_APP_INFO', // 更新AppInfo
     SETUP_FROM_MODE: 'SETUP_FROM_MODE', // 設定表單模式
@@ -91,6 +92,13 @@ export default {
             type: Ks.SETUP_FROM_MODE,
             formAttrs: formAttrs,  // form attributes: object
             initValues: initValues // initial values: object
+        }
+    },
+    assignProps: (properties, targetReducer) => {
+        return {
+            type: Ks.ASSIGN_PROPS,
+            properties: properties,
+            targetReducer: targetReducer
         }
     },
     assignStateProps: (properties, targetReducer) => {
