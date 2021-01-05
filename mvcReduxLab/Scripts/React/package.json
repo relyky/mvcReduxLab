@@ -19,7 +19,7 @@
     "@fictiv/react-pdf": "^4.0.1",
     "@trendmicro/react-radio": "^3.2.0",
     "@webpack-cli/init": "^0.3.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "build": "^0.1.4",
     "file-saver": "^2.0.0",
